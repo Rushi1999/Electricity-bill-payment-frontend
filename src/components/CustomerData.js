@@ -51,7 +51,6 @@ const CustomerData = () => {
       <p>
         Fetch data from backend, store it in redux store and get it to component
       </p>
-
       <div className="col-4 border border-light shadow p-3 mb-5 bg-white">
         <p>Find customer by id</p>
         <form
@@ -78,6 +77,11 @@ const CustomerData = () => {
         <p>
           Data from store: {customerDataFromStore.customerId}{" "}
           {customerDataFromStore.firstName} {customerDataFromStore.lastName}
+          {customerDataFromStore.middleName}
+          {customerDataFromStore.email}
+          {customerDataFromStore.gender}
+          {customerDataFromStore.addharNumber}
+          {customerDataFromStore.mobileNumber}
         </p>
       </div>
 
@@ -116,7 +120,6 @@ const CustomerData = () => {
           </table>
         </div>
       </div> */}
-
       <div className="col-4 border border-light shadow p-3 mb-5 bg-white">
         <p>Some other functionality</p>
       </div>
