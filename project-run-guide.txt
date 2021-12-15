@@ -1,0 +1,5 @@
+open project in vs code
+-> open terminal
+-> npm i
+-> npm i @reduxjs/toolkit redux react-redux --save
+-> npm install redux react-redux @reduxjs/toolkit --save
