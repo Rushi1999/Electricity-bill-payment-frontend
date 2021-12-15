@@ -22,7 +22,7 @@ const ConnectionData = () => {
   );
   // const [connectionList, setConnectionList] = useState([]);
 
-  const [connectionId, setEid] = useState("");
+  const [connectionId, setConnectionId] = useState("");
   /*original */
   const dispatch = useDispatch();
 
@@ -35,7 +35,7 @@ const ConnectionData = () => {
 
   const handleConnection = (e) => {
     console.log("handleConnection");
-    setEid(e.target.value);
+    setConnectionId(e.target.value);
   };
 
   const handleAddConnection = (e) => {
@@ -57,7 +57,7 @@ const ConnectionData = () => {
         alert(`Connection with ${connectionId} not found.`);
       });
     console.log(Object.keys(connectionList));
-    setEid("");
+    setConnectionId("");
   };
   /*add connection */
   const submitAddConnection = (evt) => {

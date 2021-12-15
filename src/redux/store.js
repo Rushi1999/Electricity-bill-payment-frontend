@@ -1,6 +1,7 @@
 import empReducer from "./EmpSlice";
 import depReducer from "./DepSlice";
 import connectionReducer from "./ConnectionSlice";
+import customerReducer from "./CustomerSlice";
 // steps -
 // 1. create store - only one
 // 2. provide the store to index.js
@@ -19,6 +20,7 @@ const store = configureStore({
     emp: empReducer,
     dep: depReducer,
     connection: connectionReducer,
+    customer: customerReducer,
     // ,
     // anotherComponent: anotherComponentReducer
   },

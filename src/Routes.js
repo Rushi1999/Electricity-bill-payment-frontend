@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import EmpData from "./components/EmpData";
 import ConnectionData from "./components/ConnectionData";
+import CustomerData from "./components/CustomerData";
 import Header from "./components/Header";
 import Hello from "./components/Hello";
 import Home from "./components/Home";
@@ -39,6 +40,10 @@ const Routes = () => {
               <Route path="/connection">
                 {" "}
                 <ConnectionData />{" "}
+              </Route>
+              <Route path="/customer">
+                {" "}
+                <CustomerData />{" "}
               </Route>
               <Route path="/spring">
                 {" "}
