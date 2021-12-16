@@ -4,7 +4,7 @@ import axios from "axios";
 
 const getConnectionByIdService = (connectionId) => {
   console.log(`getConnectionIdService`);
-  return axios.get(`/connection/getconnectionbyid/${connectionId}`);
+  return axios.get(`/connection/getConnectionbyId/${connectionId}`);
 };
 const getAllConnectionService = () => {
   console.log(`getConnectionByIdService`);

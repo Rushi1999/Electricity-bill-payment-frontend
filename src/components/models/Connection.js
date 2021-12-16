@@ -1,6 +1,14 @@
+import Address from "./Address";
 class Connection {
   connectionId;
-  address;
+  flatOrHouseNumber;
+  buildingName;
+  landmark;
+  villageName;
+  taluka;
+  districtName;
+  state;
+  pincode;
   customerId;
   connectionType;
   applicationDate;

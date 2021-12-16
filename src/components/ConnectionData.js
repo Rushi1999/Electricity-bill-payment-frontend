@@ -21,8 +21,8 @@ const ConnectionData = () => {
     new Connection()
   );
   // const [connectionList, setConnectionList] = useState([]);
-
   const [connectionId, setConnectionId] = useState("");
+
   /*original */
   const dispatch = useDispatch();
 
@@ -48,7 +48,7 @@ const ConnectionData = () => {
 
   const submitGetConnectionById = (evt) => {
     evt.preventDefault();
-    console.log(" submitGetConnectionById");
+    console.log("submitGetConnectionById");
     getConnectionByIdService(connectionId)
       .then((response) => {
         dispatch(getConnectionById(response.data));
@@ -59,18 +59,24 @@ const ConnectionData = () => {
     console.log(Object.keys(connectionList));
     setConnectionId("");
   };
+
   /*add connection */
   const submitAddConnection = (evt) => {
     evt.preventDefault();
     axios
-      .post(`http://localhost:8082/connection/addemp`, newConnectionObj)
+      .post(`http://localhost:8082/connection/addConnection`, newConnectionObj)
       .then((response) => {
         setDisplayConnectionObj(response.data);
-        alert("Employee added successfully.");
-        setNewConnectionObj({ firstName: "", salary: "" });
+        alert("connection added successfully.");
+        setNewConnectionObj({
+          applicationDate: "",
+          connectionDate: "",
+          connectionType: "",
+          connectionStatus: "",
+        });
       })
       .catch(() => {
-        alert("Employee could not be added.");
+        alert("Connection could not be added.");
       });
   };
 
@@ -116,21 +122,26 @@ const ConnectionData = () => {
           />
         </form>
         <p>
-          Data from store: {connectionDataFromStore.connectionId}{" "}
-          {connectionDataFromStore.connectionType}{" "}
-          {connectionDataFromStore.customerId}{" "}
-          {connectionDataFromStore.applicationDate}{" "}
-          {connectionDataFromStore.connectionDate}{" "}
+          Data from store: {connectionDataFromStore.connectionId}
+          {"  "}
+          {connectionDataFromStore.consumerNumber}
+          {"  "}
+          {connectionDataFromStore.applicationDate}
+          {"  "}
+          {connectionDataFromStore.connectionDate}
+          {"  "}
+          {connectionDataFromStore.connectionType}
+          {"  "}
           {connectionDataFromStore.connectionStatus}{" "}
-          {connectionDataFromStore.Address}
-          {/* {customerId}
-          applicationDate; connectionDate; connectionStatus; */}
+          {/* {connectionDataFromStore.Address} */}
         </p>
       </div>
-      <form>
+
+      <p>------------address registration------</p>
+      {/* <form>
         <div className="col-11 border border-light shadow p-3 mb-5 bg-white">
           <p>Add New Connection</p>
-          {/* <form onSubmit={submitAddEmp}> */}
+
           <div id="addNewEmpDiv">
             <p>----------------------------</p>
             <div>
@@ -291,12 +302,11 @@ const ConnectionData = () => {
               <input
                 className="form-control mt-3 btn btn-primary"
                 type="submit"
-                // type="button"
                 value="Add Connection"
                 onClick={submitAddConnection}
               />
             </div>
-            {/* </form> */}
+
             <p>
               New Employee Data: {displayConnectionObj.connectionId}{" "}
               {displayConnectionObj.connectionType}{" "}
@@ -306,10 +316,11 @@ const ConnectionData = () => {
             </p>
           </div>
         </div>
-      </form>
+      </form> */}
+
       {/* <p>------------------------</p>{" "} */}
       <div>
-        <div className="col-11 border border-light shadow p-3 mb-5 bg-white">
+        <div className="col-14 border border-light shadow p-3 mb-5 bg-white">
           <p>Show all connection</p>
           <div>
             <form className="form form-group form-primary">
@@ -321,19 +332,17 @@ const ConnectionData = () => {
               />
             </form>
           </div>
-          <table className="table table-light table-striped ">
+          <table className=" table table-light table-striped ">
             <thead>
               <tr>
-                {/* <th>Eid</th>
-                <th>Name</th>
-                <th>Salary</th> */}
-
-                <th>connection Id</th>
-                <th>customerId</th>
+                <th>connectionId</th>
+                {/* <th>customerId</th> */}
+                <th>consumerNumber</th>
                 <th>applicationDate</th>
                 <th>connectionDate</th>
+                <th>connectionType</th>
                 <th>connectionStatus</th>
-                <th>Address</th>
+                {/* <th>Address</th> */}
               </tr>
             </thead>
             <tbody>
@@ -342,11 +351,13 @@ const ConnectionData = () => {
                   <tr k={k}>
                     {" "}
                     <td>{connection.connectionId}</td>{" "}
-                    <td>{connection.customerId}</td>{" "}
+                    {/* <td>{connection.customerId}</td>{" "} */}
+                    <td>{connection.consumerNumber}</td>{" "}
                     <td>{connection.applicationDate}</td>
                     <td>{connection.connectionDate}</td>{" "}
+                    <td>{connection.connectionType}</td>{" "}
                     <td>{connection.connectionStatus}</td>{" "}
-                    <td>{connection.Address}</td>
+                    {/* <td>{connection.taluka}</td> */}
                   </tr>
                 );
               })}
@@ -354,6 +365,9 @@ const ConnectionData = () => {
           </table>
         </div>
       </div>
+      {/* <p>----------------------Demo table</p>
+
+      <p>--------------------------------</p> */}
       <div className="col-4 border border-light shadow p-3 mb-5 bg-white">
         <p>Some other functionality</p>
       </div>

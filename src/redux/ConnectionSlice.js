@@ -18,7 +18,7 @@ const ConnectionSlice = createSlice({
 
   reducers: {
     getConnectionById: (state, action) => {
-      console.log("ConnectionSlice reducers getEmpById");
+      console.log("ConnectionSlice reducers getConnectionById");
       state.connectionState = action.payload;
     },
 
