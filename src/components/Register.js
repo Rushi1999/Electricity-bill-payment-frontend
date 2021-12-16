@@ -66,8 +66,8 @@ const Register = (props) => {
                             <select class="form-control mb-3" name="role" id="role" onChange={handleAppUser}>
                                 <option value="Role">Select a role</option>
                                 <option value="ADMIN">ADMIN</option>
-                                <option value="EMPLOYEE">EMPLOYEE</option>
-                                <option value="MANAGER">MANAGER</option>
+                                <option value="EMPLOYEE">CUSTOMER</option>
+//                                 <option value="MANAGER">MANAGER</option>
                             </select>
                         </div>
                         <input
