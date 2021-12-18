@@ -136,7 +136,7 @@ const ConnectionData = () => {
         </p>
       </div>
       <p>------------address registration------</p>
-      {<form>
+      {/* <form>
         <div className="col-11 border border-light shadow p-3 mb-5 bg-white">
           <p>Add New Connection</p>
 
@@ -314,7 +314,7 @@ const ConnectionData = () => {
             </p>
           </div>
         </div>
-      </form>}
+      </form> */}
 
       {/* <p>------------------------</p>{" "} */}
       <div className="container">
