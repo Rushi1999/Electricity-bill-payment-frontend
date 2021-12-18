@@ -1,4 +1,3 @@
-import Address from "./Address";
 class Connection {
   connectionId;
   flatOrHouseNumber;

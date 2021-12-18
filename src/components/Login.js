@@ -38,34 +38,97 @@ const Login = () => {
     event.preventDefault();
   };
   return (
-    <div className="container">
-      <div className="col-4 mt-3">
-        <h1 className="display-4 text-primary">Login</h1>
-        <form className="form form-group form-dark " onSubmit={submitAppUser}>
-          <div>
-            <input
-              type="text"
-              className="form-control"
-              name="userName"
-              id="userName"
-              className="form-control mb-3"
-              placeholder="Enter username"
-              value={appUser.userName}
-              onChange={handleAppUser}
-              autoFocus
-              required
-            />
-            <input
-              type="password"
-              className="form-control"
-              name="password"
-              id="password"
-              className="form-control mb-3"
-              placeholder="Enter password"
-              value={appUser.password}
-              onChange={handleAppUser}
-              required
-            />
+    // <div className="container d-flex">
+    //   <div className="col-4 mt-3">
+    //     <h1 className="display-4 text-primary">Login</h1>
+    //     <form className="form form-group form-dark " onSubmit={submitAppUser}>
+    //       <div>
+    //         <input
+    //           type="text"
+    //           className="form-control"
+    //           name="userName"
+    //           id="userName"
+    //           className="form-control mb-3"
+    //           placeholder="Enter username"
+    //           value={appUser.userName}
+    //           onChange={handleAppUser}
+    //           autoFocus
+    //           required
+    //         />
+    //         <input
+    //           type="password"
+    //           className="form-control"
+    //           name="password"
+    //           id="password"
+    //           className="form-control mb-3"
+    //           placeholder="Enter password"
+    //           value={appUser.password}
+    //           onChange={handleAppUser}
+    //           required
+    //         />
+    //         <div class="form-group">
+    //           <select
+    //             class="form-control mb-3"
+    //             name="role"
+    //             id="role"
+    //             onChange={handleAppUser}
+    //           >
+    //             <option value="Role">Select a role</option>
+    //             <option value="ADMIN">ADMIN</option>
+    //             <option value="CUSTOMER">CUSTOMER</option>
+    //           </select>
+    //         </div>
+    //         <input
+    //           type="submit"
+    //           id="submit"
+    //           name="submit"
+    //           className="form-control btn btn-primary mb-3"
+    //           value="Login"
+    //           onClick={submitAppUser}
+    //         />
+    //       </div>
+    //     </form>
+    //     <p className="text-danger">{credentials}</p>
+    //     <Link to="/register" className="btn btn-primary col-12">
+    //       Not yet registered? Register
+    //     </Link>
+    //   </div>
+    // </div>
+    <div class="container register-form">
+      <div class="form">
+        <div class="note">
+          <p>This is a Login Form made using Boostrap.</p>
+        </div>
+
+        <div class="form-content">
+          {/* <div class="row"> */}
+          <div class="col-md-6">
+            <div class="form-group">
+              <input
+                type="text"
+                class="form-control"
+                name="userName"
+                id="userName"
+                placeholder="Your User Name *"
+                value={appUser.userName}
+                onChange={handleAppUser}
+                autoFocus
+                required
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                class="form-control"
+                name="password"
+                id="password"
+                placeholder="Confirm Password *"
+                value={appUser.password}
+                onChange={handleAppUser}
+                required
+                type="password"
+              />
+            </div>
             <div class="form-group">
               <select
                 class="form-control mb-3"
@@ -75,26 +138,38 @@ const Login = () => {
               >
                 <option value="Role">Select a role</option>
                 <option value="ADMIN">ADMIN</option>
-                <option value="EMPLOYEE">CUSTOMER</option>
-                {/* <option value="MANAGER">MANAGER</option> */}
+                <option value="CUSTOMER">CUSTOMER</option>
               </select>
             </div>
-            <input
-              type="submit"
-              id="submit"
-              name="submit"
-              className="form-control btn btn-primary mb-3"
-              value="Login"
-              onClick={submitAppUser}
-            />
+            <p className="text-danger">{credentials}</p>
+            <Link to="/register" className="btn btn-primary col-12">
+              Not yet registered? Register{" "}
+            </Link>
           </div>
-        </form>
-        <p className="text-danger">{credentials}</p>
-        <Link to="/register" className="btn btn-primary col-12">
-          Not yet registered? Register
-        </Link>
+        </div>
+        {/* <button type="button" class="btnSubmit"> */}
+        {/* <button
+          Submit
+          type="submit"
+          id="submit"
+          name="submit"
+          class="btnSubmit"
+          value="Login"
+          onClick={submitAppUser}
+        > */}
+        <input
+          type="submit"
+          id="submit"
+          name="submit"
+          class="btnSubmit form-control btn btn-primary mb-3"
+          value="Login"
+          onClick={submitAppUser}
+        />
+        {/* //   Login
+        // </button> */}
       </div>
     </div>
+    // </div>
   );
 };
 export default Login;

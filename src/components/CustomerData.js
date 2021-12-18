@@ -33,17 +33,26 @@ const CustomerData = () => {
     setCustomerId("");
   };
 
-  //   const submitGetAllEmps = (evt) => {
-  //     evt.preventDefault();
-  //     console.log("submitGetAllEmps");
-  //     getAllEmpsService()
-  //       .then((response) => {
-  //         dispatch(getAllEmps(response.data));
-  //       })
-  //       .catch(() => {
-  //         alert(`Something is wrong!`);
+  /*add connection */
+
+  // const submitAddConnection = (evt) => {
+  //   evt.preventDefault();
+  //   axios
+  //     .post(`http://localhost:8082/connection/addConnection`, newConnectionObj)
+  //     .then((response) => {
+  //       setDisplayConnectionObj(response.data);
+  //       alert("connection added successfully.");
+  //       setNewConnectionObj({
+  //         applicationDate: "",
+  //         connectionDate: "",
+  //         connectionType: "",
+  //         connectionStatus: "",
   //       });
-  //   };
+  //     })
+  //     .catch(() => {
+  //       alert("Connection could not be added.");
+  //     });
+  //};
 
   return (
     <div className="container">
@@ -84,42 +93,177 @@ const CustomerData = () => {
           {customerDataFromStore.mobileNumber}
         </p>
       </div>
-
-      {/* <div>
-        <div className="col-4 border border-light shadow p-3 mb-5 bg-white">
-          <p>Find all employees</p>
-          <div>
-            <form className="form form-group form-primary">
-              <input
-                className="mt-3 btn btn-primary btn-block"
-                type="button"
-                onClick={submitGetAllEmps}
-                value="Find All Employees"
-              />
-            </form>
+      <p>----------------------Demo table--------</p>
+      <div class="container register-form">
+        <div class="form">
+          <div class="note">
+            <p>This is a CustomerRegister Form made using Boostrap.</p>
           </div>
-          <table className="table table-light table-striped ">
-            <thead>
-              <tr>
-                <th>Eid</th>
-                <th>Name</th>
-                <th>Salary</th>
-              </tr>
-            </thead>
-            <tbody>
-              {empList.map((emp, k) => {
-                return (
-                  <tr k={k}>
-                    {" "}
-                    <td>{emp.eid}</td> <td>{emp.firstName}</td>{" "}
-                    <td>{emp.salary}</td>
-                  </tr>
-                );
-              })}
-            </tbody>
-          </table>
+
+          <div class="form-content">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    id=" buildingName"
+                    name=" buildingName"
+                    className="form-control"
+                    placeholder="Building Name *"
+                    // onChange={handleAddCustomer}
+                    // value={newConnectionObj.buildingName}
+                  />
+                </div>
+
+                <div className="form-group">
+                  <input
+                    type="text"
+                    id="landmark"
+                    name="landmark"
+                    className="form-control"
+                    placeholder="Landmark*"
+                    // onChange={handleAddConnection}
+                    // value={newConnectionObj.landmark}
+                  />
+                </div>
+                <div className="form-group">
+                  <input
+                    type="number"
+                    id=" flatOrHouseNumber"
+                    name="flatOrHouseNumber"
+                    className="form-control"
+                    placeholder="FlatOrHouse Number*"
+                    // onChange={handleAddConnection}
+                    // value={newConnectionObj.flatOrHouseNumber}
+                  />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div className="form-group">
+                  <input
+                    type="text"
+                    id="villageName"
+                    name="villageName"
+                    className="form-control"
+                    placeholder="village Name *"
+                    // onChange={handleAddConnection}
+                    // value={newConnectionObj.villageName}
+                  />
+                </div>
+                <div className="form-group">
+                  <input
+                    type="text"
+                    id="taluka"
+                    name="taluka"
+                    className="form-control"
+                    placeholder="Taluka *"
+                    // onChange={handleAddConnection}
+                    // value={newConnectionObj.taluka}
+                  />
+                </div>
+                <div className="form-group">
+                  <input
+                    type="text"
+                    id="districtName"
+                    name="districtName"
+                    className="form-control"
+                    placeholder="District Name *"
+                    // onChange={handleAddConnection}
+                    // value={newConnectionObj.districtName}
+                  />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div className="form-group">
+                  <input
+                    type="text"
+                    id="state"
+                    name="state"
+                    className="form-control"
+                    placeholder="State Name *"
+                    // onChange={handleAddConnection}
+                    // value={newConnectionObj.state}
+                  />
+                </div>
+                <div className="form-group">
+                  <input
+                    type="number"
+                    id=" pincode"
+                    name=" pincode"
+                    className="form-control"
+                    placeholder="Pincode*"
+                    // onChange={handleAddConnection}
+                    // value={newConnectionObj.pincode}
+                  />
+                </div>
+
+                <div class="form-group">
+                  <select
+                    class="form-control mb-3"
+                    name="connectionType"
+                    id="connectionType"
+                    // onChange={handleAddConnection}
+                  >
+                    <option value="connectionType">
+                      Select Connection Type
+                    </option>
+                    <option value="NON_INDUSTRIAL">NON_INDUSTRIAL</option>
+                    <option value="INDUSTRIAL">INDUSTRIAL</option>
+                    <option value="AGRICULTURAL">AGRICULTURAL</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div className="form-group">
+                  <input
+                    type="text"
+                    id=" applicationDate"
+                    name=" applicationDate"
+                    className="form-control"
+                    placeholder="Application Date *"
+                    // onChange={handleAddConnection}
+                    // value={newConnectionObj.applicationDate}
+                  />
+                </div>
+                <div className="form-group">
+                  <input
+                    type="text"
+                    id="connectionDate"
+                    name="connectionDate"
+                    className="form-control"
+                    placeholder="Connection Date *"
+                    // onChange={handleAddConnection}
+                    // value={newConnectionObj.connectionDate}
+                  />
+                </div>
+                <div class="form-group">
+                  <select
+                    class="form-control mb-3"
+                    name="connectionStatus"
+                    id="connectionStatus"
+                    // onChange={handleAddConnection}
+                  >
+                    <option value="connectionStatus">
+                      Select Connection Status
+                    </option>
+                    <option value="active">ACTIVE</option>
+                    <option value="inactive">INACTIVE</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <button
+              type="button"
+              class="btnSubmit   btn btn-primary"
+              value="Add Connection"
+              // onClick={submitAddConnection}
+            >
+              Submit
+            </button>
+          </div>
         </div>
-      </div> */}
+      </div>
+      <p>--------------------------------</p>
       <div className="col-4 border border-light shadow p-3 mb-5 bg-white">
         <p>Some other functionality</p>
       </div>

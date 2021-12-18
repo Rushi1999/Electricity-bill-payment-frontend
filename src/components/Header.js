@@ -16,6 +16,7 @@ const Header = () => {
             <Link className="navbar-brand" to="/">
               <img
                 src="https://www.capgemini.com/wp-content/themes/capgemini-komposite/assets/images/logo.svg"
+                // src={require("..").default}
                 height="24px"
                 alt="Capgemini"
               />
@@ -38,6 +39,11 @@ const Header = () => {
                 <li className="nav-item">
                   <Link className="nav-link" to="/customer">
                     Customer
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/payment">
+                    payment
                   </Link>
                 </li>
                 <li className="nav-item">
