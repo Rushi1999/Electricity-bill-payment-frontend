@@ -68,9 +68,18 @@ const ConnectionData = () => {
         setDisplayConnectionObj(response.data);
         alert("connection added successfully.");
         setNewConnectionObj({
+          flatOrHouseNumber: "",
+          buildingName: "",
+          landmark: "",
+          villageName: "",
+          taluka: "",
+          districtName: "",
+          state: "",
+          pincode: "",
+          customerId: "",
+          connectionType: "",
           applicationDate: "",
           connectionDate: "",
-          connectionType: "",
           connectionStatus: "",
         });
       })
@@ -93,105 +102,7 @@ const ConnectionData = () => {
 
   return (
     <div className="container">
-      <h1 className="display-4 text-primary mt-3 mb-3">Connection Component</h1>
-      <p>
-        Fetch data from backend, store it in redux store and get it to component
-      </p>
-      <div className="col-11 border border-light shadow p-3 mb-5 bg-white">
-        <p>Find connection by connectionid</p>
-        <form
-          className="form form-group form-primary"
-          onSubmit={submitGetConnectionById}
-        >
-          <input
-            className="form-control mt-3"
-            type="number"
-            id="connectionId"
-            name="connectionId"
-            value={connectionId}
-            onChange={handleConnection}
-            placeholder="Enter connection Id to search"
-            autoFocus
-            required
-          />
-          <input
-            className="form-control mt-3 btn btn-primary"
-            type="submit"
-            value="Find Connection"
-          />
-        </form>
-        <p>
-          Data from store: {connectionDataFromStore.connectionId}
-          {"  "}
-          {connectionDataFromStore.consumerNumber}
-          {"  "}
-          {connectionDataFromStore.applicationDate}
-          {"  "}
-          {connectionDataFromStore.connectionDate}
-          {"  "}
-          {connectionDataFromStore.connectionType}
-          {"  "}
-          {connectionDataFromStore.connectionStatus}{" "}
-          {/* {connectionDataFromStore.Address} */}
-        </p>
-      </div>
-
-      <div className="container">
-        <div className="col-14 border border-light shadow p-3 mb-5 bg-white">
-          <button
-            type="button"
-            class="btn btn-link"
-            onClick={submitGetAllConnection}
-            value="Find All Connection"
-          >
-            Show All Connections
-          </button>
-          {/* <div>
-            <form className="form form-group form-primary">
-              <input
-                className="mt-3 btn btn-primary btn-block"
-                type="button"
-                onClick={submitGetAllConnection}
-                value="Find All Connection"
-              />
-            </form>
-          </div> */}
-          <table className=" table table-light table-striped ">
-            <thead>
-              <tr>
-                <th>connectionId</th>
-                <th>consumerNumber</th>
-                <th>applicationDate</th>
-                <th>connectionDate</th>
-                <th>connectionType</th>
-                <th>connectionStatus</th>
-                <th>City</th>
-                <th>Pincode</th>
-              </tr>
-            </thead>
-            <tbody>
-              {connectionList.map((connection, k) => {
-                return (
-                  <tr k={k}>
-                    {" "}
-                    <td>{connection.connectionId}</td>{" "}
-                    <td>{connection.consumerNumber}</td>{" "}
-                    <td>{connection.applicationDate}</td>
-                    <td>{connection.connectionDate}</td>{" "}
-                    <td>{connection.connectionType}</td>{" "}
-                    <td>{connection.connectionStatus}</td>{" "}
-                    <td>{connection.villageName}</td>{" "}
-                    <td>{connection.pincode}</td>{" "}
-                  </tr>
-                );
-              })}
-            </tbody>
-          </table>
-        </div>
-      </div>
-
-      <p>----------------------Demo table--------</p>
-      <div class="container register-form">
+      <div class="register-form">
         <div class="form">
           <div class="note">
             <p>This is a simpleRegister Form made using Boostrap.</p>
@@ -203,8 +114,8 @@ const ConnectionData = () => {
                 <div class="form-group">
                   <input
                     type="text"
-                    id=" buildingName"
-                    name=" buildingName"
+                    id="buildingName"
+                    name="buildingName"
                     className="form-control"
                     placeholder="Building Name *"
                     onChange={handleAddConnection}
@@ -285,8 +196,8 @@ const ConnectionData = () => {
                 <div className="form-group">
                   <input
                     type="number"
-                    id=" pincode"
-                    name=" pincode"
+                    id="pincode"
+                    name="pincode"
                     className="form-control"
                     placeholder="Pincode*"
                     onChange={handleAddConnection}
@@ -294,16 +205,16 @@ const ConnectionData = () => {
                   />
                 </div>
                 {/* <div className="form-group">
-                  <input
-                    type="text"
-                    id="connectionType"
-                    name="connectionType"
-                    className="form-control"
-                    placeholder="Connection Type *"
-                    onChange={handleAddConnection}
-                    value={newConnectionObj.connectionType}
-                  />
-                </div> */}
+                    <input
+                      type="text"
+                      id="connectionType"
+                      name="connectionType"
+                      className="form-control"
+                      placeholder="Connection Type *"
+                      onChange={handleAddConnection}
+                      value={newConnectionObj.connectionType}
+                    />
+                  </div> */}
                 <div class="form-group">
                   <select
                     class="form-control mb-3"
@@ -324,8 +235,8 @@ const ConnectionData = () => {
                 <div className="form-group">
                   <input
                     type="text"
-                    id=" applicationDate"
-                    name=" applicationDate"
+                    id="applicationDate"
+                    name="applicationDate"
                     className="form-control"
                     placeholder="Application Date *"
                     onChange={handleAddConnection}
@@ -369,10 +280,6 @@ const ConnectionData = () => {
             </button>
           </div>
         </div>
-      </div>
-      <p>--------------------------------</p>
-      <div className="col-4 border border-light shadow p-3 mb-5 bg-white">
-        <p>Some other functionality</p>
       </div>
     </div>
   );

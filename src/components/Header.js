@@ -16,7 +16,6 @@ const Header = () => {
             <Link className="navbar-brand" to="/">
               <img
                 src="https://www.capgemini.com/wp-content/themes/capgemini-komposite/assets/images/logo.svg"
-                // src={require("..").default}
                 height="24px"
                 alt="Capgemini"
               />
@@ -34,6 +33,11 @@ const Header = () => {
                 <li className="nav-item">
                   <Link className="nav-link" to="/connection">
                     Connection
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/newconnectionreq">
+                    NewConnectionRequest
                   </Link>
                 </li>
                 <li className="nav-item">
@@ -71,6 +75,100 @@ const Header = () => {
           </div>
         </nav>
       </header>
+
+      /*{ <div class="container d-flex align-items-center justify-content-between">
+          <h1 class="logo">
+            <a href="index.html">Baker</a>
+          </h1>
+
+          <nav id="navbar" class="navbar">
+            <ul>
+              <li>
+                <a class="nav-link scrollto active" href="#hero">
+                  Home
+                </a>
+              </li>
+              <li>
+                <a class="nav-link scrollto" href="#about">
+                  About
+                </a>
+              </li>
+              <li>
+                <a class="nav-link scrollto" href="#services">
+                  Services
+                </a>
+              </li>
+              <li>
+                <a class="nav-link scrollto" href="#portfolio">
+                  Portfolio
+                </a>
+              </li>
+              <li>
+                <a class="nav-link scrollto" href="#team">
+                  Team
+                </a>
+              </li>
+              <li>
+                <a class="nav-link scrollto" href="#pricing">
+                  Pricing
+                </a>
+              </li>
+              <li class="dropdown">
+                <a href="#">
+                  <span>Drop Down</span>{" "}
+                  <i
+                    class="bi
+                  bi-chevron-down"
+                  ></i>
+                </a>
+                <ul>
+                  <li>
+                    <a href="#">Drop Down 1</a>
+                  </li>
+                  <li class="dropdown">
+                    <a href="#">
+                      <span>Deep Drop Down</span>{" "}
+                      <i class="bi bi-chevron-right"></i>
+                    </a>
+                    <ul>
+                      <li>
+                        <a href="#">Deep Drop Down 1</a>
+                      </li>
+                      <li>
+                        <a href="#">Deep Drop Down 2</a>
+                      </li>
+                      <li>
+                        <a href="#">Deep Drop Down 3</a>
+                      </li>
+                      <li>
+                        <a href="#">Deep Drop Down 4</a>
+                      </li>
+                      <li>
+                        <a href="#">Deep Drop Down 5</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">Drop Down 2</a>
+                  </li>
+                  <li>
+                    <a href="#">Drop Down 3</a>
+                  </li>
+                  <li>
+                    <a href="#">Drop Down 4</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a class="nav-link scrollto" href="#contact">
+                  Contact
+                </a>
+              </li>
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+          </nav>
+        </div>
+      </header> }*/
     );
   } else {
     return (
@@ -114,79 +212,3 @@ const Header = () => {
 };
 
 export default Header;
-
-// import { Link } from "react-router-dom";
-
-// const Header = () => {
-
-//     return (
-//         <header class="header sticky-top">
-//             <nav class="navbar navbar-fixed-top navbar-expand-lg navbar-dark bg-dark">
-//                 <div class="container">
-//                     <Link className="navbar-brand" to="/">
-//                         <img src="https://www.capgemini.com/wp-content/themes/capgemini-komposite/assets/images/logo.svg"
-//                             height="24px" alt="Capgemini" />
-//                     </Link>
-//                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
-//                         <span class="navbar-toggler-icon"></span>
-//                     </button>
-//                     <div class="collapse navbar-collapse" id="navbarResponsive">
-//                         <ul class="navbar-nav ml-auto">
-//                             <li className="nav-item">
-//                                 <Link className="nav-link" to="/hello" >Hello</Link>
-//                             </li>
-//                             <li className="nav-item">
-//                                 <Link className="nav-link" to="/emp" >Emp</Link>
-//                             </li>
-//                             <li className="nav-item">
-//                                 <Link className="nav-link" to="/spring" >Spring</Link>
-//                             </li>
-//                             <li className="nav-item">
-//                                 <Link className="nav-link" to="/register" >Register</Link>
-//                             </li>
-//                             <li className="nav-item">
-//                                 <Link className="nav-link" to="/login" >Login</Link>
-//                             </li>
-//                             <li className="nav-item">
-//                                 <Link className="nav-link" to="/logout" >Logout</Link>
-//                             </li>
-//                         </ul>
-//                     </div>
-//                 </div>
-//             </nav>
-//         </header>
-//     );
-// }
-
-// export default Header;
-
-// types of components in react
-// 1. function components
-// 2. class components
-
-// function component
-// const Header = () => {
-
-//     return (
-//         <div className="display-4">
-//             <p>Header Component</p>
-//         </div>
-//     );
-// }
-// export default Header;
-
-// class component
-// import React from "react";
-// class Header extends React.Component {
-
-//     // constructor() { super(); }
-
-//     render = () => {
-//         return (
-//             <div className="display-4" >
-//                 <p>Header Component</p>
-//             </div>
-//         )
-//     }
-// }
-// export default Header;

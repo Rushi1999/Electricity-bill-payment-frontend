@@ -122,7 +122,7 @@ const Login = () => {
                 class="form-control"
                 name="password"
                 id="password"
-                placeholder="Confirm Password *"
+                placeholder="Password *"
                 value={appUser.password}
                 onChange={handleAppUser}
                 required

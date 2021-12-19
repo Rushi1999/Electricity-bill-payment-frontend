@@ -12,6 +12,7 @@ import Page404 from "./components/Page404";
 import Register from "./components/Register";
 import SpringBootData from "./components/SpringBootData";
 import PaymentData from "./components/PaymentData";
+import NewConnectionReq from "./components/NewConnectionReq";
 const Routes = () => {
   return (
     <div>
@@ -40,6 +41,10 @@ const Routes = () => {
               <Route path="/connection">
                 {" "}
                 <ConnectionData />{" "}
+              </Route>
+              <Route path="/newconnectionreq">
+                {" "}
+                <NewConnectionReq />{" "}
               </Route>
               <Route path="/payment">
                 {" "}
