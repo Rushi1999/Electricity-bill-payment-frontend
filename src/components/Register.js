@@ -106,7 +106,10 @@ const Register = (props) => {
           <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt="" />
           <h3>Welcome</h3>
           <p>You are 30 seconds away from earning your own money!</p>
-          <input type="submit" name="" value="Login" href="/login" />
+          {/* <input type="submit" name="" value="Login" src="/login" /> */}
+          <a href="/login">
+            <input type="submit" name="" value="Login" src="/login" />
+          </a>
           <br />
         </div>
         <div class="col-md-9 register-right">

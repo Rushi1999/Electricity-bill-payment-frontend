@@ -92,35 +92,39 @@ const ConnectionData = () => {
   };
 
   return (
-    <div className="container">
+    <div class="container-fluid p-4">
       <h1 className="display-4 text-primary mt-3 mb-3">Connection Component</h1>
       <p>
         Fetch data from backend, store it in redux store and get it to component
       </p>
-      <div className="col-11 border border-light shadow p-3 mb-5 bg-white">
-        <p>Find connection by connectionid</p>
-        <form
-          className="form form-group form-primary"
-          onSubmit={submitGetConnectionById}
-        >
-          <input
-            className="form-control mt-3"
-            type="number"
-            id="connectionId"
-            name="connectionId"
-            value={connectionId}
-            onChange={handleConnection}
-            placeholder="Enter connection Id to search"
-            autoFocus
-            required
-          />
-          <input
-            className="form-control mt-3 btn btn-primary"
-            type="submit"
-            value="Find Connection"
-          />
-        </form>
-        <p>
+      <div class="row">
+        <div className="col-2 mr-2 border border-light shadow p-3 mb-5 bg-white">
+          <p>Find connection by connectionid</p>
+          <form
+            className="form form-group form-primary"
+            onSubmit={submitGetConnectionById}
+          >
+            <input
+              className="form-control mt-3"
+              type="number"
+              id="connectionId"
+              name="connectionId"
+              value={connectionId}
+              onChange={handleConnection}
+              placeholder="Enter connection Id to search"
+              autoFocus
+              required
+            />
+            <input
+              class="form-control mt-3 btn-sm small btn btn-primary"
+              type="submit"
+              value="Find Connection"
+              // type="button"
+              data-toggle="modal"
+              data-target="#exampleModal"
+            />
+          </form>
+          {/* <p>
           Data from store: {connectionDataFromStore.connectionId}
           {"  "}
           {connectionDataFromStore.consumerNumber}
@@ -132,30 +136,67 @@ const ConnectionData = () => {
           {connectionDataFromStore.connectionType}
           {"  "}
           {connectionDataFromStore.connectionStatus}{" "}
-          {/* {connectionDataFromStore.Address} */}
-        </p>
-      </div>
+        </p> */}
+          <div class="modal" tabindex="-1" id="exampleModal" role="dialog">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Connection details</h5>
+                  <button
+                    type="button"
+                    class="close"
+                    data-dismiss="modal"
+                    aria-label="Close"
+                  >
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <p>
+                    {/* Data from store: */}
+                    {connectionDataFromStore.connectionId}
+                    {"  "}
+                    {connectionDataFromStore.consumerNumber}
+                    {"  "}
+                    {connectionDataFromStore.applicationDate}
+                    {"  "}
+                    {connectionDataFromStore.connectionDate}
+                    {"  "}
+                    {connectionDataFromStore.connectionType}
+                    {"  "}
+                    {connectionDataFromStore.connectionStatus}{" "}
+                    {/* {connectionDataFromStore.Address} */}
+                  </p>
+                </div>
+                <div class="modal-footer">
+                  {/* <button type="button" class="btn btn-primary">
+                    Save changes
+                  </button> */}
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    data-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-      <div className="container">
-        <div className="col-14 border border-light shadow p-3 mb-5 bg-white">
+        {/* <div className="container "> */}
+
+        <div className="col-9 border border-light shadow p-3 mb-5 bg-white">
           <button
             type="button"
-            class="btn btn-link"
+            id="OnHoverText"
+            class="btn btn-2 btn-link showall"
             onClick={submitGetAllConnection}
             value="Find All Connection"
           >
             Show All Connections
           </button>
-          {/* <div>
-            <form className="form form-group form-primary">
-              <input
-                className="mt-3 btn btn-primary btn-block"
-                type="button"
-                onClick={submitGetAllConnection}
-                value="Find All Connection"
-              />
-            </form>
-          </div> */}
           <table className=" table table-light table-striped ">
             <thead>
               <tr>
@@ -189,188 +230,10 @@ const ConnectionData = () => {
           </table>
         </div>
       </div>
+      {/* </div> */}
+      <p>-----------------</p>
 
-      <p>----------------------Demo table--------</p>
-      <div class="container register-form">
-        <div class="form">
-          <div class="note">
-            <p>This is a simpleRegister Form made using Boostrap.</p>
-          </div>
-
-          <div class="form-content">
-            <div class="row">
-              <div class="col-md-6">
-                <div class="form-group">
-                  <input
-                    type="text"
-                    id=" buildingName"
-                    name=" buildingName"
-                    className="form-control"
-                    placeholder="Building Name *"
-                    onChange={handleAddConnection}
-                    value={newConnectionObj.buildingName}
-                  />
-                </div>
-
-                <div className="form-group">
-                  <input
-                    type="text"
-                    id="landmark"
-                    name="landmark"
-                    className="form-control"
-                    placeholder="Landmark*"
-                    onChange={handleAddConnection}
-                    value={newConnectionObj.landmark}
-                  />
-                </div>
-                <div className="form-group">
-                  <input
-                    type="number"
-                    id=" flatOrHouseNumber"
-                    name="flatOrHouseNumber"
-                    className="form-control"
-                    placeholder="FlatOrHouse Number*"
-                    onChange={handleAddConnection}
-                    value={newConnectionObj.flatOrHouseNumber}
-                  />
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div className="form-group">
-                  <input
-                    type="text"
-                    id="villageName"
-                    name="villageName"
-                    className="form-control"
-                    placeholder="village Name *"
-                    onChange={handleAddConnection}
-                    value={newConnectionObj.villageName}
-                  />
-                </div>
-                <div className="form-group">
-                  <input
-                    type="text"
-                    id="taluka"
-                    name="taluka"
-                    className="form-control"
-                    placeholder="Taluka *"
-                    onChange={handleAddConnection}
-                    value={newConnectionObj.taluka}
-                  />
-                </div>
-                <div className="form-group">
-                  <input
-                    type="text"
-                    id="districtName"
-                    name="districtName"
-                    className="form-control"
-                    placeholder="District Name *"
-                    onChange={handleAddConnection}
-                    value={newConnectionObj.districtName}
-                  />
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div className="form-group">
-                  <input
-                    type="text"
-                    id="state"
-                    name="state"
-                    className="form-control"
-                    placeholder="State Name *"
-                    onChange={handleAddConnection}
-                    value={newConnectionObj.state}
-                  />
-                </div>
-                <div className="form-group">
-                  <input
-                    type="number"
-                    id=" pincode"
-                    name=" pincode"
-                    className="form-control"
-                    placeholder="Pincode*"
-                    onChange={handleAddConnection}
-                    value={newConnectionObj.pincode}
-                  />
-                </div>
-                {/* <div className="form-group">
-                  <input
-                    type="text"
-                    id="connectionType"
-                    name="connectionType"
-                    className="form-control"
-                    placeholder="Connection Type *"
-                    onChange={handleAddConnection}
-                    value={newConnectionObj.connectionType}
-                  />
-                </div> */}
-                <div class="form-group">
-                  <select
-                    class="form-control mb-3"
-                    name="connectionType"
-                    id="connectionType"
-                    onChange={handleAddConnection}
-                  >
-                    <option value="connectionType">
-                      Select Connection Type
-                    </option>
-                    <option value="NON_INDUSTRIAL">NON_INDUSTRIAL</option>
-                    <option value="INDUSTRIAL">INDUSTRIAL</option>
-                    <option value="AGRICULTURAL">AGRICULTURAL</option>
-                  </select>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div className="form-group">
-                  <input
-                    type="text"
-                    id=" applicationDate"
-                    name=" applicationDate"
-                    className="form-control"
-                    placeholder="Application Date *"
-                    onChange={handleAddConnection}
-                    value={newConnectionObj.applicationDate}
-                  />
-                </div>
-                <div className="form-group">
-                  <input
-                    type="text"
-                    id="connectionDate"
-                    name="connectionDate"
-                    className="form-control"
-                    placeholder="Connection Date *"
-                    onChange={handleAddConnection}
-                    value={newConnectionObj.connectionDate}
-                  />
-                </div>
-                <div class="form-group">
-                  <select
-                    class="form-control mb-3"
-                    name="connectionStatus"
-                    id="connectionStatus"
-                    onChange={handleAddConnection}
-                  >
-                    <option value="connectionStatus">
-                      Select Connection Status
-                    </option>
-                    <option value="active">ACTIVE</option>
-                    <option value="inactive">INACTIVE</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-            <button
-              type="button"
-              class="btnSubmit   btn btn-primary"
-              value="Add Connection"
-              onClick={submitAddConnection}
-            >
-              Submit
-            </button>
-          </div>
-        </div>
-      </div>
-      <p>--------------------------------</p>
+      <p>-------------------</p>
       <div className="col-4 border border-light shadow p-3 mb-5 bg-white">
         <p>Some other functionality</p>
       </div>

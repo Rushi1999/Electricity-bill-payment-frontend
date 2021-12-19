@@ -19,7 +19,7 @@ const Routes = () => {
       <Router>
         <div>
           <Header />
-          <div className="container">
+          <div className="">
             <Switch>
               <Route exact path="/">
                 {" "}
