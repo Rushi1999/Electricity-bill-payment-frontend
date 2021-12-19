@@ -93,13 +93,15 @@ const ConnectionData = () => {
 
   return (
     <div class="container-fluid p-4">
-      <h1 className="display-4 text-primary mt-3 mb-3">Connection Component</h1>
+      <h1 class=" text-primary mt-3 mb-3 table-text">Connection Table</h1>
       <p>
         Fetch data from backend, store it in redux store and get it to component
       </p>
       <div class="row">
         <div className="col-2 mr-2 border border-light shadow p-3 mb-5 bg-white">
-          <p>Find connection by connectionid</p>
+          <p className="text-primary mt-3 mb-3">
+            Find connection by connectionid
+          </p>
           <form
             className="form form-group form-primary"
             onSubmit={submitGetConnectionById}
@@ -111,7 +113,7 @@ const ConnectionData = () => {
               name="connectionId"
               value={connectionId}
               onChange={handleConnection}
-              placeholder="Enter connection Id to search"
+              placeholder="Enter connection Id..."
               autoFocus
               required
             />
@@ -231,9 +233,7 @@ const ConnectionData = () => {
         </div>
       </div>
       {/* </div> */}
-      <p>-----------------</p>
 
-      <p>-------------------</p>
       <div className="col-4 border border-light shadow p-3 mb-5 bg-white">
         <p>Some other functionality</p>
       </div>

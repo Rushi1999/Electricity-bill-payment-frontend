@@ -259,7 +259,7 @@ const Register = (props) => {
                       <option class="hidden" selected disabled>
                         Select Role
                       </option>
-                      <option value="ADMIN">Customer</option>
+                      <option value="CUSTOMER">Customer</option>
                     </select>
                   </div>
                   <div class="form-group">
@@ -267,7 +267,8 @@ const Register = (props) => {
                       type="password"
                       class="form-control"
                       placeholder="Confirm Password *"
-                      value=""
+                      value={appUser.password}
+                      onChange={handleAppUser}
                     />
                   </div>
 
