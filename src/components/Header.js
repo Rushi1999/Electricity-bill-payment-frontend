@@ -106,7 +106,7 @@ const Header = () => {
                         <a href="/payment">All Payments</a>
                       </li>
                       <li>
-                        <a href="/payment">Pay/ViewBill</a>
+                        <a href="/billpayment">Pay/ViewBill</a>
                       </li>
                     </ul>
                   </li>

@@ -13,6 +13,7 @@ import Register from "./components/Register";
 import SpringBootData from "./components/SpringBootData";
 import PaymentData from "./components/PaymentData";
 import NewConnectionReq from "./components/NewConnectionReq";
+import BillPayment from "./components/BillPayment";
 const Routes = () => {
   return (
     <div>
@@ -49,6 +50,10 @@ const Routes = () => {
               <Route path="/payment">
                 {" "}
                 <PaymentData />{" "}
+              </Route>
+              <Route path="/billpayment">
+                {" "}
+                <BillPayment />{" "}
               </Route>
               <Route path="/customer">
                 {" "}

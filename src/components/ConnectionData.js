@@ -123,19 +123,7 @@ const ConnectionData = () => {
               data-target="#exampleModal"
             />
           </form>
-          {/* <p>
-          Data from store: {connectionDataFromStore.connectionId}
-          {"  "}
-          {connectionDataFromStore.consumerNumber}
-          {"  "}
-          {connectionDataFromStore.applicationDate}
-          {"  "}
-          {connectionDataFromStore.connectionDate}
-          {"  "}
-          {connectionDataFromStore.connectionType}
-          {"  "}
-          {connectionDataFromStore.connectionStatus}{" "}
-        </p> */}
+
           <div class="modal" tabindex="-1" id="exampleModal" role="dialog">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
