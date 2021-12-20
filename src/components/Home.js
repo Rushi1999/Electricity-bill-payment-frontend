@@ -31,7 +31,7 @@ const Home = () => {
                   href="#about"
                   class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center"
                 >
-                  <span>Get Started</span>
+                  <span>Enjoy Services</span>
                   <i class="bi bi-arrow-right"></i>
                 </a>
               </div>

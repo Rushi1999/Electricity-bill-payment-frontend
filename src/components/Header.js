@@ -29,13 +29,8 @@ const Header = () => {
                 </a>
               </li>
               <li>
-                <a class="nav-link scrollto" href="blog.html">
+                <a class="nav-link scrollto" href="/about">
                   About
-                </a>
-              </li>
-              <li>
-                <a class="nav-link scrollto" href="blog.html">
-                  Services
                 </a>
               </li>
               <li>
@@ -44,12 +39,18 @@ const Header = () => {
                 </a>
               </li>
               <li>
-                <a class="nav-link scrollto" href="blog.html">
+                <a class="nav-link scrollto" href="/team">
                   Team
                 </a>
               </li>
+              {/* <li>
+                <a class="nav-link scrollto" href="/testimonials">
+                  Testimonials
+                </a>
+              </li> */}
+
               <li>
-                <a href="blog.html">Blog</a>
+                <a href="/blog">Blog</a>
               </li>
               <li class="dropdown">
                 <a href="blog.html">
@@ -113,7 +114,7 @@ const Header = () => {
                 </ul>
               </li>
               <li>
-                <a class="nav-link scrollto" href="#contact">
+                <a class="nav-link scrollto" href="/contact">
                   Contact
                 </a>
               </li>

@@ -110,9 +110,9 @@ const PaymentData = () => {
                   //   onChange={handleAddConnection}
                 >
                   <option value="paymentMode">Payment Mode</option>
-                  <option value="DEBIT">DEBIT</option>
+                  <option value="DEBIT">CARD</option>
                   <option value="NETBANKING">NETBANKING</option>
-                  <option value="CREDIT">CREDIT</option>
+                  {/* <option value="CREDIT">CREDIT</option> */}
                 </select>
               </div>
             </div>

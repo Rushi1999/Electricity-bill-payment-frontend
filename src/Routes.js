@@ -14,6 +14,11 @@ import SpringBootData from "./components/SpringBootData";
 import PaymentData from "./components/PaymentData";
 import NewConnectionReq from "./components/NewConnectionReq";
 import BillPayment from "./components/BillPayment";
+import Contact from "./components/Contact";
+import Blog from "./components/Blog";
+import About from "./components/About";
+import Testimonials from "./components/Testimonials";
+import Team from "./components/Team";
 const Routes = () => {
   return (
     <div>
@@ -29,6 +34,26 @@ const Routes = () => {
               <Route path="/home">
                 {" "}
                 <Home />{" "}
+              </Route>
+              <Route path="/contact">
+                {" "}
+                <Contact />{" "}
+              </Route>
+              <Route path="/blog">
+                {" "}
+                <Blog />{" "}
+              </Route>
+              <Route path="/about">
+                {" "}
+                <About />{" "}
+              </Route>
+              <Route path="/team">
+                {" "}
+                <Team />{" "}
+              </Route>
+              <Route path="/testimonials">
+                {" "}
+                <Testimonials />{" "}
               </Route>
               <Route path="/hello">
                 {" "}

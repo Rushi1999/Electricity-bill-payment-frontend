@@ -15,7 +15,7 @@ const PaymentData = () => {
   const [payment, setPayment] = useState(new Payment());
   const [newPaymentObj, setNewPaymentObj] = useState(new Payment());
   const [displayPaymentObj, setDisplayConnectionObj] = useState(new Payment());
-  // const [connectionList, setConnectionList] = useState([]);
+
   const [paymentId, setPaymentId] = useState("");
 
   /*original */
@@ -94,7 +94,7 @@ const PaymentData = () => {
       </p>
       <div class="row">
         <div className="col-2 mr-2 border border-light shadow p-3 mb-5 bg-white">
-          <p className="text-primary mt-3 mb-3">Find connection by PaymentId</p>
+          <p className="text-primary mt-3 mb-3">Find Payment by PaymentId</p>
           <form
             className="form form-group form-primary"
             onSubmit={submitGetPaymentById}
@@ -114,24 +114,10 @@ const PaymentData = () => {
               class="form-control mt-3 btn-sm small btn btn-primary"
               type="submit"
               value="Find payment"
-              // type="button"
               data-toggle="modal"
               data-target="#exampleModal"
             />
           </form>
-          {/* <p>
-          Data from store: {connectionDataFromStore.connectionId}
-          {"  "}
-          {connectionDataFromStore.consumerNumber}
-          {"  "}
-          {connectionDataFromStore.applicationDate}
-          {"  "}
-          {connectionDataFromStore.connectionDate}
-          {"  "}
-          {connectionDataFromStore.connectionType}
-          {"  "}
-          {connectionDataFromStore.connectionStatus}{" "}
-        </p> */}
           <div class="modal" tabindex="-1" id="exampleModal" role="dialog">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
@@ -148,7 +134,6 @@ const PaymentData = () => {
                 </div>
                 <div class="modal-body">
                   <p>
-                    {/* Data from store: */}
                     {paymentDataFromStore.paymentId}
                     {"  "}
                     {paymentDataFromStore.paymentDate}
@@ -159,13 +144,9 @@ const PaymentData = () => {
                     {"  "}
                     {paymentDataFromStore.paymentStatus}
                     {"  "}
-                    {/* {paymentDataFromStore.connectionStatus}{" "} */}
                   </p>
                 </div>
                 <div class="modal-footer">
-                  {/* <button type="button" class="btn btn-primary">
-                    Save changes
-                  </button> */}
                   <button
                     type="button"
                     class="btn btn-primary"
@@ -178,6 +159,7 @@ const PaymentData = () => {
             </div>
           </div>
         </div>
+
         <div className="col-6 border border-light shadow p-3 mb-5 bg-white">
           <p>Find all Payment</p>
           <div>
@@ -205,9 +187,9 @@ const PaymentData = () => {
                   <tr k={k}>
                     {" "}
                     <td>{payment.paymentId}</td>
-                    <td>{payment.status}</td>
-                    {"  "}
-                    <td>{payment.paymentMode}</td> <td>{payment.totalPaid}</td>{" "}
+                    <td>{payment.status}</td> {"  "}
+                    <td>{payment.paymentMode}</td>
+                    <td>{payment.totalPaid}</td>{" "}
                   </tr>
                 );
               })}

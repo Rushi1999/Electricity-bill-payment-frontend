@@ -3,7 +3,7 @@ import axios from "axios";
 // Create services for other components in this way.
 
 const getPaymentByIdService = (paymentId) => {
-  console.log(`getConnectionByIdService`);
+  console.log(`getPaymentByIdService`);
   return axios.get(`/payment/getpaymentbyid/${paymentId}`);
 };
 const getAllPaymentService = () => {
