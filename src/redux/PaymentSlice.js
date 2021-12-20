@@ -17,14 +17,14 @@ const PaymentSlice = createSlice({
   },
 
   reducers: {
-    // getPayemntById: (state, action) => {
-    //   console.log("PayemntSlice reducers getPaymentById");
-    //   state.empState = action.payload;
-    // },
+    getPaymentById: (state, action) => {
+      console.log("PayemntSlice reducers getPaymentById");
+      state.paymentState = action.payload;
+    },
 
     getAllPayment: (state, action) => {
-      console.log("PaymentSlice reducers getAllEmps");
-      state.empList = action.payload;
+      console.log("PaymentSlice reducers getAllPayment");
+      state.paymentList = action.payload;
     },
 
     // more methods will be added
@@ -32,5 +32,5 @@ const PaymentSlice = createSlice({
 });
 
 // export const { getEmpById, getAllEmps } = EmpSlice.actions;
-export const { getAllPayment } = PaymentSlice.actions;
+export const { getAllPayment, getPaymentById } = PaymentSlice.actions;
 export default PaymentSlice.reducer;

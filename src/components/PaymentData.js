@@ -1,14 +1,26 @@
-import { getAllPaymentService } from "./services/PaymentService";
+import {
+  getPaymentByIdService,
+  getAllPaymentService,
+} from "./services/PaymentService";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useState } from "react";
-import { getAllPayment } from "../redux/PaymentSlice";
+import Payment from "./models/Payment";
+import axios from "axios";
 
+import { getAllPayment, getPaymentById } from "../redux/PaymentSlice";
 import { Store } from "redux";
 import { Provider } from "react";
 
 const PaymentData = () => {
+  const [payment, setPayment] = useState(new Payment());
+  const [newPaymentObj, setNewPaymentObj] = useState(new Payment());
+  const [displayPaymentObj, setDisplayConnectionObj] = useState(new Payment());
+  // const [connectionList, setConnectionList] = useState([]);
   const [paymentId, setPaymentId] = useState("");
+
+  /*original */
   const dispatch = useDispatch();
+
   const paymentDataFromStore = useSelector(
     (state) => state.payment.paymentState
   );
@@ -19,19 +31,48 @@ const PaymentData = () => {
     setPaymentId(e.target.value);
   };
 
-  //   const submitGetEmpById = (evt) => {
-  //     evt.preventDefault();
-  //     console.log("submitGetEmpById");
-  //     getEmpByIdService(eid)
-  //       .then((response) => {
-  //         dispatch(getEmpById(response.data));
-  //       })
-  //       .catch(() => {
-  //         alert(`Employee with ${eid} not found.`);
+  // const handleAddPayment = (e) => {
+  //   console.log(e.target.value);
+  //   setNewPaymentObj({
+  //     ...newPaymentObj,
+  //     [e.target.name]: e.target.value,
+  //   });
+  // };
+
+  const submitGetPaymentById = (evt) => {
+    evt.preventDefault();
+    console.log("submitGetPaymentById");
+    getPaymentByIdService(paymentId)
+      .then((response) => {
+        dispatch(getPaymentById(response.data));
+      })
+      .catch(() => {
+        alert(`payment with ${paymentId} not found.`);
+      });
+    console.log(Object.keys(paymentList));
+    setPaymentId("");
+  };
+
+  /*add connection */
+
+  // const submitAddPayment = (evt) => {
+  //   evt.preventDefault();
+  //   axios
+  //     .post(`http://localhost:8082/payment/addConnection`, newPaymentObj)
+  //     .then((response) => {
+  //       setDisplayPaymentObj(response.data);
+  //       alert("connection added successfully.");
+  //       setNewPaymentObj({
+  //         applicationDate: "",
+  //         connectionDate: "",
+  //         connectionType: "",
+  //         connectionStatus: "",
   //       });
-  //     console.log(Object.keys(empList));
-  //     setEid("");
-  //   };
+  //     })
+  //     .catch(() => {
+  //       alert("Payment could not be added.");
+  //     });
+  // };
 
   const submitGetAllPayment = (evt) => {
     evt.preventDefault();
@@ -44,10 +85,100 @@ const PaymentData = () => {
         alert(`Something is wrong!`);
       });
   };
+
   return (
-    <div className="container">
-      <div>
-        <div className="col-4 border border-light shadow p-3 mb-5 bg-white">
+    <div class="container-fluid p-4">
+      <h1 class=" text-primary mt-3 mb-3 table-text">Payment Table</h1>
+      <p>
+        Fetch data from backend, store it in redux store and get it to component
+      </p>
+      <div class="row">
+        <div className="col-2 mr-2 border border-light shadow p-3 mb-5 bg-white">
+          <p className="text-primary mt-3 mb-3">Find connection by PaymentId</p>
+          <form
+            className="form form-group form-primary"
+            onSubmit={submitGetPaymentById}
+          >
+            <input
+              className="form-control mt-3"
+              type="number"
+              id="paymentId"
+              name="paymentId"
+              value={paymentId}
+              onChange={handlePayment}
+              placeholder="Enter payment Id..."
+              autoFocus
+              required
+            />
+            <input
+              class="form-control mt-3 btn-sm small btn btn-primary"
+              type="submit"
+              value="Find payment"
+              // type="button"
+              data-toggle="modal"
+              data-target="#exampleModal"
+            />
+          </form>
+          {/* <p>
+          Data from store: {connectionDataFromStore.connectionId}
+          {"  "}
+          {connectionDataFromStore.consumerNumber}
+          {"  "}
+          {connectionDataFromStore.applicationDate}
+          {"  "}
+          {connectionDataFromStore.connectionDate}
+          {"  "}
+          {connectionDataFromStore.connectionType}
+          {"  "}
+          {connectionDataFromStore.connectionStatus}{" "}
+        </p> */}
+          <div class="modal" tabindex="-1" id="exampleModal" role="dialog">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Payment details</h5>
+                  <button
+                    type="button"
+                    class="close"
+                    data-dismiss="modal"
+                    aria-label="Close"
+                  >
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <p>
+                    {/* Data from store: */}
+                    {paymentDataFromStore.paymentId}
+                    {"  "}
+                    {paymentDataFromStore.paymentDate}
+                    {"  "}
+                    {paymentDataFromStore.totalPaid}
+                    {"  "}
+                    {paymentDataFromStore.paymentMode}
+                    {"  "}
+                    {paymentDataFromStore.paymentStatus}
+                    {"  "}
+                    {/* {paymentDataFromStore.connectionStatus}{" "} */}
+                  </p>
+                </div>
+                <div class="modal-footer">
+                  {/* <button type="button" class="btn btn-primary">
+                    Save changes
+                  </button> */}
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    data-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="col-6 border border-light shadow p-3 mb-5 bg-white">
           <p>Find all Payment</p>
           <div>
             <form className="form form-group form-primary">
@@ -55,7 +186,7 @@ const PaymentData = () => {
                 className="mt-3 btn btn-primary btn-block"
                 type="button"
                 onClick={submitGetAllPayment}
-                value="Find All Employees"
+                value="Find All Payments"
               />
             </form>
           </div>
@@ -63,8 +194,9 @@ const PaymentData = () => {
             <thead>
               <tr>
                 <th>Payment Id</th>
-                <th>paymentId</th>
-                <th>paymentId</th>
+                <th>payment Status</th>
+                <th>payment Mode</th>
+                <th>total Bill</th>
               </tr>
             </thead>
             <tbody>
@@ -72,8 +204,10 @@ const PaymentData = () => {
                 return (
                   <tr k={k}>
                     {" "}
-                    <td>{payment.paymentId}</td> <td>{payment.paymentId}</td>{" "}
                     <td>{payment.paymentId}</td>
+                    <td>{payment.status}</td>
+                    {"  "}
+                    <td>{payment.paymentMode}</td> <td>{payment.totalPaid}</td>{" "}
                   </tr>
                 );
               })}

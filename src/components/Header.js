@@ -83,8 +83,8 @@ const Header = () => {
           justify-content-between"
         >
           <a href="/" class="logo d-flex align-items-center">
-            <img src="assets/img/logo.png" alt="" />
-            <span>Electricity</span>
+            <img src="https://img.icons8.com/cotton/64/000000/electricity.png" />
+            <span>E-Pay</span>
           </a>
 
           <nav id="navbar" class="navbar">
@@ -95,22 +95,22 @@ const Header = () => {
                 </a>
               </li>
               <li>
-                <a class="nav-link scrollto" href="#about">
+                <a class="nav-link scrollto" href="blog.html">
                   About
                 </a>
               </li>
               <li>
-                <a class="nav-link scrollto" href="#services">
+                <a class="nav-link scrollto" href="blog.html">
                   Services
                 </a>
               </li>
               <li>
-                <a class="nav-link scrollto" href="#portfolio">
+                <a class="nav-link scrollto" href="blog.html">
                   Portfolio
                 </a>
               </li>
               <li>
-                <a class="nav-link scrollto" href="#team">
+                <a class="nav-link scrollto" href="blog.html">
                   Team
                 </a>
               </li>
@@ -118,7 +118,7 @@ const Header = () => {
                 <a href="blog.html">Blog</a>
               </li>
               <li class="dropdown">
-                <a href="#">
+                <a href="blog.html">
                   <span>Services</span>{" "}
                   <i
                     class="bi
@@ -140,6 +140,7 @@ const Header = () => {
                       </li>
                     </ul>
                   </li>
+
                   <li class="dropdown">
                     <a href="#">
                       <span>Connections</span>{" "}
@@ -154,14 +155,26 @@ const Header = () => {
                       </li>
                     </ul>
                   </li>
+
                   <li>
                     <a href="/reading">Reading</a>
                   </li>
                   <li>
                     <a href="/bill">Bill</a>
                   </li>
-                  <li>
-                    <a href="/payment">Payment</a>
+                  <li class="dropdown">
+                    <a href="#">
+                      <span>Payment</span>
+                      <i class="bi bi-chevron-right"></i>
+                    </a>
+                    <ul>
+                      <li>
+                        <a href="/payment">All Payments</a>
+                      </li>
+                      <li>
+                        <a href="/payment">Pay/ViewBill</a>
+                      </li>
+                    </ul>
                   </li>
                 </ul>
               </li>
@@ -267,7 +280,7 @@ const Header = () => {
               </li>
               <li>
                 <a class="getstarted scrollto" href="/register">
-                  Login/Register
+                  Register
                 </a>
               </li>
             </ul>

@@ -1,6 +1,9 @@
 class Payment {
   paymentId;
-  paymentStatus;
+  customerId;
+  paymentDate;
+  status;
+  totalPaid;
   paymentMode;
 }
 export default Payment;

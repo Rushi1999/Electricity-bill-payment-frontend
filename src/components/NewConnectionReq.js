@@ -7,7 +7,6 @@ import { useDispatch, useSelector } from "react-redux";
 // import { useState } from "react";
 import Connection from "./models/Connection";
 import axios from "axios";
-// import { getEmpById, getAllEmps } from "../redux/ConnectionSlice";
 
 import { getConnectionById, getAllConnection } from "../redux/ConnectionSlice";
 import { Store } from "redux";
@@ -19,7 +18,7 @@ const ConnectionData = () => {
   const [displayConnectionObj, setDisplayConnectionObj] = useState(
     new Connection()
   );
-  // const [connectionList, setConnectionList] = useState([]);
+
   const [connectionId, setConnectionId] = useState("");
 
   /*original */
@@ -45,19 +44,19 @@ const ConnectionData = () => {
     });
   };
 
-  const submitGetConnectionById = (evt) => {
-    evt.preventDefault();
-    console.log("submitGetConnectionById");
-    getConnectionByIdService(connectionId)
-      .then((response) => {
-        dispatch(getConnectionById(response.data));
-      })
-      .catch(() => {
-        alert(`Connection with ${connectionId} not found.`);
-      });
-    console.log(Object.keys(connectionList));
-    setConnectionId("");
-  };
+  // const submitGetConnectionById = (evt) => {
+  //   evt.preventDefault();
+  //   console.log("submitGetConnectionById");
+  //   getConnectionByIdService(connectionId)
+  //     .then((response) => {
+  //       dispatch(getConnectionById(response.data));
+  //     })
+  //     .catch(() => {
+  //       alert(`Connection with ${connectionId} not found.`);
+  //     });
+  //   console.log(Object.keys(connectionList));
+  //   setConnectionId("");
+  // };
 
   /*add connection */
   const submitAddConnection = (evt) => {
@@ -84,21 +83,21 @@ const ConnectionData = () => {
         });
       })
       .catch(() => {
-        alert("Connection could not be added.");
+        alert("Please check all mandatory filed");
       });
   };
 
-  const submitGetAllConnection = (evt) => {
-    evt.preventDefault();
-    console.log("submitGetAllConnection");
-    getAllConnectionService()
-      .then((response) => {
-        dispatch(getAllConnection(response.data));
-      })
-      .catch(() => {
-        alert(`Something is wrong!`);
-      });
-  };
+  // const submitGetAllConnection = (evt) => {
+  //   evt.preventDefault();
+  //   console.log("submitGetAllConnection");
+  //   getAllConnectionService()
+  //     .then((response) => {
+  //       dispatch(getAllConnection(response.data));
+  //     })
+  //     .catch(() => {
+  //       alert(`Something is wrong!`);
+  //     });
+  // };
 
   return (
     <div className="container">
@@ -120,27 +119,32 @@ const ConnectionData = () => {
                     placeholder="Building Name *"
                     onChange={handleAddConnection}
                     value={newConnectionObj.buildingName}
+                    required
+                    autoFocus
                   />
                 </div>
 
                 <div className="form-group">
                   <input
                     type="text"
+                    required
                     id="landmark"
                     name="landmark"
                     className="form-control"
                     placeholder="Landmark*"
+                    required
                     onChange={handleAddConnection}
-                    value={newConnectionObj.landmark}
                   />
                 </div>
                 <div className="form-group">
                   <input
                     type="number"
+                    required
                     id=" flatOrHouseNumber"
                     name="flatOrHouseNumber"
                     className="form-control"
                     placeholder="FlatOrHouse Number*"
+                    required
                     onChange={handleAddConnection}
                     value={newConnectionObj.flatOrHouseNumber}
                   />
@@ -150,6 +154,7 @@ const ConnectionData = () => {
                 <div className="form-group">
                   <input
                     type="text"
+                    required
                     id="villageName"
                     name="villageName"
                     className="form-control"
@@ -162,6 +167,7 @@ const ConnectionData = () => {
                   <input
                     type="text"
                     id="taluka"
+                    required
                     name="taluka"
                     className="form-control"
                     placeholder="Taluka *"
@@ -172,6 +178,7 @@ const ConnectionData = () => {
                 <div className="form-group">
                   <input
                     type="text"
+                    required
                     id="districtName"
                     name="districtName"
                     className="form-control"
@@ -185,6 +192,7 @@ const ConnectionData = () => {
                 <div className="form-group">
                   <input
                     type="text"
+                    required
                     id="state"
                     name="state"
                     className="form-control"
@@ -196,6 +204,8 @@ const ConnectionData = () => {
                 <div className="form-group">
                   <input
                     type="number"
+                    maxlength="6"
+                    required
                     id="pincode"
                     name="pincode"
                     className="form-control"
@@ -204,17 +214,7 @@ const ConnectionData = () => {
                     value={newConnectionObj.pincode}
                   />
                 </div>
-                {/* <div className="form-group">
-                    <input
-                      type="text"
-                      id="connectionType"
-                      name="connectionType"
-                      className="form-control"
-                      placeholder="Connection Type *"
-                      onChange={handleAddConnection}
-                      value={newConnectionObj.connectionType}
-                    />
-                  </div> */}
+
                 <div class="form-group">
                   <select
                     class="form-control mb-3"
@@ -234,8 +234,9 @@ const ConnectionData = () => {
               <div class="col-md-6">
                 <div className="form-group">
                   <input
-                    type="text"
+                    type="date"
                     id="applicationDate"
+                    min="2021-12-21"
                     name="applicationDate"
                     className="form-control"
                     placeholder="Application Date *"
@@ -245,11 +246,12 @@ const ConnectionData = () => {
                 </div>
                 <div className="form-group">
                   <input
-                    type="text"
+                    type="date"
+                    min="2021-12-21"
                     id="connectionDate"
                     name="connectionDate"
                     className="form-control"
-                    placeholder="Connection Date *"
+                    placeholder="Connection Date*"
                     onChange={handleAddConnection}
                     value={newConnectionObj.connectionDate}
                   />

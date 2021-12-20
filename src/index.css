@@ -9,6 +9,17 @@ body {
 .register-form {
   padding-top: 25px;
 }
+/*date*/
+input[type="date"]:before {
+  content: attr(placeholder) !important;
+  color: #aaa;
+  margin-right: 0.5em;
+}
+input[type="date"]:focus:before,
+input[type="date"]:valid:before {
+  content: "";
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;

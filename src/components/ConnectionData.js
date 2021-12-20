@@ -4,10 +4,8 @@ import {
 } from "./services/ConnectionServices";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-// import { useState } from "react";
 import Connection from "./models/Connection";
 import axios from "axios";
-// import { getEmpById, getAllEmps } from "../redux/ConnectionSlice";
 
 import { getConnectionById, getAllConnection } from "../redux/ConnectionSlice";
 import { Store } from "redux";
@@ -121,7 +119,6 @@ const ConnectionData = () => {
               class="form-control mt-3 btn-sm small btn btn-primary"
               type="submit"
               value="Find Connection"
-              // type="button"
               data-toggle="modal"
               data-target="#exampleModal"
             />
@@ -154,8 +151,7 @@ const ConnectionData = () => {
                   </button>
                 </div>
                 <div class="modal-body">
-                  <p>
-                    {/* Data from store: */}
+                  {/* <p>
                     {connectionDataFromStore.connectionId}
                     {"  "}
                     {connectionDataFromStore.consumerNumber}
@@ -167,8 +163,29 @@ const ConnectionData = () => {
                     {connectionDataFromStore.connectionType}
                     {"  "}
                     {connectionDataFromStore.connectionStatus}{" "}
-                    {/* {connectionDataFromStore.Address} */}
-                  </p>
+                  </p> */}
+                  <table className=" table table-light table-striped ">
+                    <thead>
+                      <tr>
+                        <th>consumer Number</th>
+                        {/* <th>Number</th> */}
+                        <th>connection Date</th>
+                        <th>connection Type</th>
+                        {/* <th>connectionType</th>
+                        <th>Pincode</th> */}
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        {" "}
+                        <td>{connectionDataFromStore.connectionId}</td>{" "}
+                        {/* <td>{connectionDataFromStore.consumerNumber}</td> */}
+                        <td>{connectionDataFromStore.connectionDate}</td>{" "}
+                        <td>{connectionDataFromStore.connectionType}</td>{" "}
+                        {/* <td>{connectionDataFromStore.pincode}</td>{" "} */}
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
                 <div class="modal-footer">
                   {/* <button type="button" class="btn btn-primary">

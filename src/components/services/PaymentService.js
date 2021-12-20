@@ -2,13 +2,13 @@ import axios from "axios";
 
 // Create services for other components in this way.
 
-// const getEmpByIdService = (eid) => {
-//   console.log(`getEmpByIdService`);
-//   return axios.get(`/emp/getempbyid/${eid}`);
-// };
+const getPaymentByIdService = (paymentId) => {
+  console.log(`getConnectionByIdService`);
+  return axios.get(`/payment/getpaymentbyid/${paymentId}`);
+};
 const getAllPaymentService = () => {
-  console.log(`getEmpByIdService`);
-  return axios.get(`/emp/getallemps`);
+  console.log(`getPaymentByIdService`);
+  return axios.get(`/payment/getallpayment`);
 };
 
 // const addEmpService = (emp) => {
@@ -34,6 +34,7 @@ const getAllPaymentService = () => {
 export {
   //   getEmpByIdService,
   getAllPaymentService,
+  getPaymentByIdService,
   //   addEmpService,
   //   updateEmpService,
   //   deleteEmpService,
