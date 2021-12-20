@@ -42,7 +42,11 @@ const Home = () => {
             data-aos="zoom-out"
             data-aos-delay="200"
           >
-            <img src="assets/img/hero-img.png" class="img-fluid" alt="" />
+            <img
+              src="https://5.imimg.com/data5/BJ/RE/MY-2/gocashlesslogo-500x500.jpg"
+              class="img-fluid"
+              alt=""
+            />
           </div>
         </div>
       </div>
