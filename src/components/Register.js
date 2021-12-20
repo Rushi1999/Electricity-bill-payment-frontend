@@ -21,7 +21,7 @@ const Register = (props) => {
 
   const submitAppUser = (event) => {
     axios
-      .post(`http://localhost:8082/register`, appUser)
+      .post(`http://localhost:8082/user/register`, appUser)
       .then((response) => {
         console.log(response.data);
         localStorage.setItem("appUser", appUser);

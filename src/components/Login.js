@@ -21,7 +21,7 @@ const Login = () => {
 
   const submitAppUser = (event) => {
     axios
-      .post(`http://localhost:8082/login`, appUser)
+      .post(`http://localhost:8082/user/login`, appUser)
       .then((response) => {
         console.log(response.data);
         sessionStorage.setItem("isUserLoggedIn", true);
@@ -145,6 +145,14 @@ const Login = () => {
             <Link to="/register" className="btn btn-primary col-12">
               Not yet registered? Register{" "}
             </Link>
+            <button
+              type="button"
+              class="btn btn-2 btn-link showall"
+              href="/register"
+              value="Find All Connection"
+            >
+              Show All Connections
+            </button>
           </div>
         </div>
         {/* <button type="button" class="btnSubmit"> */}

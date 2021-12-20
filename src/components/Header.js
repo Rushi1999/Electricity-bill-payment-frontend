@@ -10,72 +10,6 @@ const Header = () => {
 
   if (loginStatus) {
     return (
-      // <header class="header sticky-top">
-      //   <nav class="navbar navbar-fixed-top navbar-expand-lg navbar-dark bg-dark">
-      //     <div class="container">
-      //       <Link className="navbar-brand" to="/">
-      //         <img
-      //           src="https://www.capgemini.com/wp-content/themes/capgemini-komposite/assets/images/logo.svg"
-      //           height="24px"
-      //           alt="Capgemini"
-      //         />
-      //       </Link>
-      //       <button
-      //         class="navbar-toggler"
-      //         type="button"
-      //         data-toggle="collapse"
-      //         data-target="#navbarResponsive"
-      //       >
-      //         <span class="navbar-toggler-icon"></span>
-      //       </button>
-      //       <div class="collapse navbar-collapse" id="navbarResponsive">
-      //         <ul class="navbar-nav ml-auto">
-      //           <li className="nav-item">
-      //             <Link className="nav-link" to="/connection">
-      //               Connection
-      //             </Link>
-      //           </li>
-      //           <li className="nav-item">
-      //             <Link className="nav-link" to="/newconnectionreq">
-      //               NewConnectionRequest
-      //             </Link>
-      //           </li>
-      //           <li className="nav-item">
-      //             <Link className="nav-link" to="/customer">
-      //               Customer
-      //             </Link>
-      //           </li>
-      //           <li className="nav-item">
-      //             <Link className="nav-link" to="/payment">
-      //               payment
-      //             </Link>
-      //           </li>
-      //           <li className="nav-item">
-      //             <Link className="nav-link" to="/hello">
-      //               Hello
-      //             </Link>
-      //           </li>
-      //           <li className="nav-item">
-      //             <Link className="nav-link" to="/emp">
-      //               Emp
-      //             </Link>
-      //           </li>
-      //           <li className="nav-item">
-      //             <Link className="nav-link" to="/spring">
-      //               Spring
-      //             </Link>
-      //           </li>
-      //           <li className="nav-item">
-      //             <Link className="nav-link" to="/logout">
-      //               Logout
-      //             </Link>
-      //           </li>
-      //         </ul>
-      //       </div>
-      //     </div>
-      //   </nav>
-      // </header>
-
       /**----------------------------------------new header-------------------------------- */
       <header id="header" class="header fixed-top header sticky-top">
         <div
@@ -238,8 +172,8 @@ const Header = () => {
         justify-content-between"
         >
           <a href="/" class="logo d-flex align-items-center">
-            <img src="assets/img/logo.png" alt="" />
-            <span>Electricity</span>
+            <img src="https://img.icons8.com/cotton/64/000000/electricity.png" />
+            <span>E-Pay</span>
           </a>
 
           <nav id="navbar" class="navbar">
@@ -254,11 +188,7 @@ const Header = () => {
                   About
                 </a>
               </li>
-              <li>
-                <a class="nav-link scrollto" href="#services">
-                  Services
-                </a>
-              </li>
+
               <li>
                 <a class="nav-link scrollto" href="#portfolio">
                   Portfolio
