@@ -67,10 +67,10 @@ const Header = () => {
                     </a>
                     <ul>
                       <li>
-                        <a href="/customerregister">Customer Details</a>
+                        <a href="/customerregister">Customer Profile</a>
                       </li>
                       <li>
-                        <a href="/customer">Check all customer</a>
+                        <a href="/customer">Check Customer Profiles</a>
                       </li>
                     </ul>
                   </li>

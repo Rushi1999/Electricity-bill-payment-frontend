@@ -119,13 +119,24 @@ const PaymentData = () => {
           </div>
         </div>
       </div>
-      <input
+      {/* <input
         class="form-control mt-3 btn-sm small btn btn-primary"
         type="submit"
-        value="Pay"
+        value="Find Connection"
         data-toggle="modal"
         data-target="#exampleModal"
-      />
+      /> */}
+      <button
+        type="button"
+        class="btnSubmit   btn btn-primary"
+        // class="form-control mt-3 btn-sm small btn btn-primary"
+        // type="submit"
+        value="Pay Bill"
+        data-toggle="modal"
+        data-target="#exampleModal"
+      >
+        Pay
+      </button>
       <div class="modal" tabindex="-1" id="exampleModal" role="dialog">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
@@ -142,8 +153,13 @@ const PaymentData = () => {
             </div>
             <div class="modal-body">
               <p>
+                {displayPaymentObj.totalPaid}
                 <a>
-                  <img src="./" alt="Canvas Logo" />
+                  <img
+                    class="barcode"
+                    src="https://github.com/Rushi1999/Electricity-bill-payment-frontend/blob/main/src/assets/img/barcode.jpeg?raw=true"
+                    alt="Canvas Logo"
+                  />
                 </a>
               </p>
             </div>
