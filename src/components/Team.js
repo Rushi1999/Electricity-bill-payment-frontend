@@ -16,7 +16,7 @@ const Team = () => {
             <div class="member">
               <div class="member-img">
                 <img
-                  src="https://github.com/Rushi1999/Electricity-bill-payment-frontend/blob/main/src/assets/img/Rushi.jpeg?raw=true"
+                  src="https://github.com/Rushi1999/Electricity-bill-payment-frontend/blob/main/src/assets/img/team.jpeg?raw=true"
                   class="img-fluid"
                   alt=""
                 />
