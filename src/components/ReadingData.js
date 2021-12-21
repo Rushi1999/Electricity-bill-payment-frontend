@@ -167,6 +167,11 @@ const ReadingData = () => {
             class="btn btn-2 btn-link showall"
             onClick={submitGetAllReading}
             value="Find All Reading"
+            // type="button"
+            // id="OnHoverText"
+            // class="btn btn-2 btn-link showall"
+            // onClick={submitGetAllReading}
+            // value="Find All Reading"
           >
             Show All Readings
           </button>
