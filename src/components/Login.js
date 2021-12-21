@@ -25,6 +25,7 @@ const Login = () => {
       .then((response) => {
         console.log(response.data);
         sessionStorage.setItem("isUserLoggedIn", true);
+        sessionStorage.setItem("loggedInUser", response.data.role);
         alert("Success");
         window.location.assign("/home");
         // history.push('/home');

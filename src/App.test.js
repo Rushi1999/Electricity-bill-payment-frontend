@@ -8,6 +8,13 @@ import ConnectionData from "./components/ConnectionData";
 import NewConnectionReq from "./components/NewConnectionReq";
 import App from "./App";
 import CustomerData from "./components/CustomerData";
+import BillData from "./components/BillData";
+import CheckBill from "./components/CheckBill";
+import BillPayment from "./components/BillPayment";
+import PaymentData from "./components/PaymentData";
+import CustomerProfile from "./components/CustomerProfile";
+import ReadingData from "./components/ReadingData";
+import ReadingReq from "./components/ReadingReq";
 //import { render, screen } from '@testing-library/react';
 // Website https://jestjs.io/
 // learning resources https://jestjs.io/docs/getting-started
@@ -41,27 +48,7 @@ beforeAll(() => {
 beforeEach(() => {
   console.log("beforreEach");
 });
-
-// positive test case
-
-// test("render Data from Hello", () => {
-//   render(<Hello />);
-//   const linkElement = screen.getByText(/Data from backend/);
-//   expect(linkElement).toBeInTheDocument();
-// });
-
-// positive test case
-
-// test("render Data from EmpData", () => {
-//   render(
-//     <Provider store={store}>
-//       <EmpData />
-//     </Provider>
-//   );
-//   const linkElement = screen.getByText("Employee Component");
-//   expect(linkElement).toBeInTheDocument();
-// });
-
+/**customer test case */
 test("render Data from CustomerProfile", () => {
   render(
     <Provider store={store}>
@@ -71,7 +58,29 @@ test("render Data from CustomerProfile", () => {
   const linkElement = screen.getByText("Customer Component");
   expect(linkElement).toBeInTheDocument();
 });
+test("render Data from CustomerProfile", () => {
+  render(
+    <Provider store={store}>
+      <CustomerProfile />
+    </Provider>
+  );
+  const linkElement = screen.getByText("Customer Component");
+  expect(linkElement).toBeInTheDocument();
+});
+// negative test case
+test("render Data from CustomerProfile", () => {
+  render(
+    <Provider store={store}>
+      <CustomerProfile />
+    </Provider>
+  );
+  const linkElement = screen.findByText();
+  expect(linkElement).not.toBe(
+    "Some other text which is not present in the component."
+  );
+});
 
+/**connection test cases */
 test("render Data from ConnectionData", () => {
   render(
     <Provider store={store}>
@@ -81,7 +90,6 @@ test("render Data from ConnectionData", () => {
   const linkElement = screen.getByText("Connection Component");
   expect(linkElement).toBeInTheDocument();
 });
-
 // negative test case
 
 test("render Data from connectionData", () => {
@@ -119,31 +127,137 @@ test("render Data from NewConnectionReq", () => {
   );
 });
 
+/**bill test case */
+test("render Data from BillData", () => {
+  render(
+    <Provider store={store}>
+      <BillData />
+    </Provider>
+  );
+  const linkElement = screen.getByText("BillData Component");
+  expect(linkElement).toBeInTheDocument();
+});
+test("render Data from CheckBill", () => {
+  render(
+    <Provider store={store}>
+      <CheckBill />
+    </Provider>
+  );
+  const linkElement = screen.getByText("CheckBill Component");
+  expect(linkElement).toBeInTheDocument();
+});
+// negative test case
+test("render Data from CheckBill", () => {
+  render(
+    <Provider store={store}>
+      <CheckBill />
+    </Provider>
+  );
+  const linkElement = screen.findByText();
+  expect(linkElement).not.toBe(
+    "Some other text which is not present in the component."
+  );
+});
+
+/**Payment test case */
+test("render Data from PaymentData", () => {
+  render(
+    <Provider store={store}>
+      <PaymentData />
+    </Provider>
+  );
+  const linkElement = screen.getByText("PaymentData Component");
+  expect(linkElement).toBeInTheDocument();
+});
+test("render Data from BillPayment", () => {
+  render(
+    <Provider store={store}>
+      <BillPayment />
+    </Provider>
+  );
+  const linkElement = screen.getByText("BillPayment Component");
+  expect(linkElement).toBeInTheDocument();
+});
+
+/*reading test cases */
+
+test("render Data from ReadingData", () => {
+  render(
+    <Provider store={store}>
+      <ReadingData />
+    </Provider>
+  );
+  const linkElement = screen.getByText("BillData Component");
+  expect(linkElement).toBeInTheDocument();
+});
+
+test("render Data from ReadingReq", () => {
+  render(
+    <Provider store={store}>
+      <ReadingReq />
+    </Provider>
+  );
+  const linkElement = screen.getByText("CheckBill Component");
+  expect(linkElement).toBeInTheDocument();
+});
+// negative test case
+test("render Data from ReadingReq", () => {
+  render(
+    <Provider store={store}>
+      <ReadingReq />
+    </Provider>
+  );
+  const linkElement = screen.findByText();
+  expect(linkElement).not.toBe(
+    "Some other text which is not present in the component."
+  );
+});
+
+/**Payment test case */
+test("render Data from PaymentData", () => {
+  render(
+    <Provider store={store}>
+      <PaymentData />
+    </Provider>
+  );
+  const linkElement = screen.getByText("PaymentData Component");
+  expect(linkElement).toBeInTheDocument();
+});
+test("render Data from BillPayment", () => {
+  render(
+    <Provider store={store}>
+      <BillPayment />
+    </Provider>
+  );
+  const linkElement = screen.getByText("BillPayment Component");
+  expect(linkElement).toBeInTheDocument();
+});
+
 // positive test case
 
-// test("render Data from SpringBootData", () => {
-//   render(
-//     <Provider store={store}>
-//       <SpringBootData />
-//     </Provider>
-//   );
-//   const linkElement = screen.getByText("Get All Employees");
-//   expect(linkElement).toBeInTheDocument();
-// });
+test("render Data from SpringBootData", () => {
+  render(
+    <Provider store={store}>
+      <SpringBootData />
+    </Provider>
+  );
+  const linkElement = screen.getByText("Get All Employees");
+  expect(linkElement).toBeInTheDocument();
+});
 
 // negative test case
 
-// test("render Data from SpringBootData", () => {
-//   render(
-//     <Provider store={store}>
-//       <SpringBootData />
-//     </Provider>
-//   );
-//   const linkElement = screen.findByText();
-//   expect(linkElement).not.toBe(
-//     "Some other text which is not present in the component."
-//   );
-// });
+test("render Data from SpringBootData", () => {
+  render(
+    <Provider store={store}>
+      <SpringBootData />
+    </Provider>
+  );
+  const linkElement = screen.findByText();
+  expect(linkElement).not.toBe(
+    "Some other text which is not present in the component."
+  );
+});
 
 // import { render, screen } from '@testing-library/react';
 

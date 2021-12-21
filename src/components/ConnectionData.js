@@ -92,9 +92,7 @@ const ConnectionData = () => {
   return (
     <div class="container-fluid p-4">
       <h1 class=" text-primary mt-3 mb-3 table-text">Connection Table</h1>
-      <p>
-        Fetch data from backend, store it in redux store and get it to component
-      </p>
+      <p>Below table contain all customer connection details</p>
       <div class="row">
         <div className="col-2 mr-2 border border-light shadow p-3 mb-5 bg-white">
           <p className="text-primary mt-3 mb-3">
@@ -237,11 +235,10 @@ const ConnectionData = () => {
           </table>
         </div>
       </div>
-      {/* </div> */}
 
-      <div className="col-4 border border-light shadow p-3 mb-5 bg-white">
+      {/* <div className="col-4 border border-light shadow p-3 mb-5 bg-white">
         <p>Some other functionality</p>
-      </div>
+      </div> */}
     </div>
   );
 };

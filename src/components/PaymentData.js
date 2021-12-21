@@ -89,9 +89,7 @@ const PaymentData = () => {
   return (
     <div class="container-fluid p-4">
       <h1 class=" text-primary mt-3 mb-3 table-text">Payment Table</h1>
-      <p>
-        Fetch data from backend, store it in redux store and get it to component
-      </p>
+      <p>Below table contain all customer payment details</p>
       <div class="row">
         <div className="col-2 mr-2 border border-light shadow p-3 mb-5 bg-white">
           <p className="text-primary mt-3 mb-3">Find Payment by PaymentId</p>
@@ -161,15 +159,24 @@ const PaymentData = () => {
         </div>
 
         <div className="col-6 border border-light shadow p-3 mb-5 bg-white">
-          <p>Find all Payment</p>
+          {/* <p>Find all Payment</p> */}
           <div>
             <form className="form form-group form-primary">
-              <input
+              {/* <input
                 className="mt-3 btn btn-primary btn-block"
                 type="button"
                 onClick={submitGetAllPayment}
                 value="Find All Payments"
-              />
+              /> */}
+              <button
+                type="button"
+                id="OnHoverText"
+                class="btn btn-2 btn-link showall"
+                onClick={submitGetAllPayment}
+                value="Find All Payment"
+              >
+                Show All payments
+              </button>
             </form>
           </div>
           <table className="table table-light table-striped ">

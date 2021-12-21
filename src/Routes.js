@@ -19,6 +19,11 @@ import Blog from "./components/Blog";
 import About from "./components/About";
 import Testimonials from "./components/Testimonials";
 import Team from "./components/Team";
+import CustomerProfile from "./components/CustomerProfile";
+import ReadingData from "./components/ReadingData";
+import ReadingReq from "./components/ReadingReq";
+import BillData from "./components/BillData";
+import CheckBill from "./components/CheckBill";
 const Routes = () => {
   return (
     <div>
@@ -42,6 +47,10 @@ const Routes = () => {
               <Route path="/blog">
                 {" "}
                 <Blog />{" "}
+              </Route>
+              <Route path="/bill">
+                {" "}
+                <BillData />{" "}
               </Route>
               <Route path="/about">
                 {" "}
@@ -72,6 +81,18 @@ const Routes = () => {
                 {" "}
                 <NewConnectionReq />{" "}
               </Route>
+              <Route path="/reading">
+                {" "}
+                <ReadingData />{" "}
+              </Route>
+              <Route path="/readingreq">
+                {" "}
+                <ReadingReq />{" "}
+              </Route>
+              <Route path="/checkbill">
+                {" "}
+                <CheckBill />{" "}
+              </Route>
               <Route path="/payment">
                 {" "}
                 <PaymentData />{" "}
@@ -83,6 +104,10 @@ const Routes = () => {
               <Route path="/customer">
                 {" "}
                 <CustomerData />{" "}
+              </Route>
+              <Route path="/customerprofile">
+                {" "}
+                <CustomerProfile />{" "}
               </Route>
               <Route path="/spring">
                 {" "}

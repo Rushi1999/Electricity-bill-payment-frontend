@@ -11,14 +11,18 @@ const About = () => {
             <div class="content">
               <h3>Who We Are</h3>
               <h2>
-                Expedita voluptas omnis cupiditate totam eveniet nobis sint
-                iste. Dolores est repellat corrupti reprehenderit.
+                With us you are safe, with us you work is easy , With us you
+                have a good helping Hand.
               </h2>
               <p>
-                Quisquam vel ut sint cum eos hic dolores aperiam. Sed deserunt
-                et. Inventore et et dolor consequatur itaque ut voluptate sed
-                et. Magnam nam ipsum tenetur suscipit voluptatum nam et est
-                corrupti.
+                We're providing an helping hand to make your work easy , get
+                Connection check your bill and pay with easy step's with an easy
+                pay. We are Community and phase of new Ear.
+                <p>
+                  {" "}
+                  Since 2020 founded by Capgemini fresher small team ...Seeking
+                  for yor support.
+                </p>
               </p>
               <div class="text-center text-lg-start">
                 <a

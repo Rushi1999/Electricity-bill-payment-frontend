@@ -15,8 +15,8 @@ const Contact = () => {
 
               <h2 class="entry-title">
                 <a href="blog-single.html">
-                  Dolorum optio tempore voluptas dignissimos cumque fuga qui
-                  quibusdam quia
+                  E-pay a easy bill payment method provide by Capgemini fresher
+                  team..
                 </a>
               </h2>
 
@@ -24,12 +24,12 @@ const Contact = () => {
                 <ul>
                   <li class="d-flex align-items-center">
                     <i class="bi bi-person"></i>{" "}
-                    <a href="blog-single.html">John Doe</a>
+                    <a href="blog-single.html">Heena</a>
                   </li>
                   <li class="d-flex align-items-center">
                     <i class="bi bi-clock"></i>{" "}
                     <a href="blog-single.html">
-                      <time datetime="2020-01-01">Jan 1, 2020</time>
+                      <time datetime="2020-01-01">july 20, 2020</time>
                     </a>
                   </li>
                   <li class="d-flex align-items-center">
@@ -41,80 +41,47 @@ const Contact = () => {
 
               <div class="entry-content">
                 <p>
-                  Similique neque nam consequuntur ad non maxime aliquam quas.
-                  Quibusdam animi praesentium. Aliquam et laboriosam eius aut
-                  nostrum quidem aliquid dicta. Et eveniet enim. Qui velit est
-                  ea dolorem doloremque deleniti aperiam unde soluta. Est cum et
-                  quod quos aut ut et sit sunt. Voluptate porro consequatur
-                  assumenda perferendis dolore.
+                  As this emerging technology reshapes the world,it must
+                  represent a range of persppectives and experiences.
                 </p>
 
                 <p>
-                  Sit repellat hic cupiditate hic ut nemo. Quis nihil sunt non
-                  reiciendis. Sequi in accusamus harum vel aspernatur. Excepturi
-                  numquam nihil cumque odio. Et voluptate cupiditate.
+                  Finding exactly the right strategy for your cloud migration
+                  first requires a careful, and expert assessment that evaluates
+                  your existing IT infrastructure and provides analysis on cost
+                  benefit, security, and the entire scope of risk factors
+                  associated with a migration to the cloud.
                 </p>
 
                 <blockquote>
                   <p>
-                    Et vero doloremque tempore voluptatem ratione vel aut.
-                    Deleniti sunt animi aut. Aut eos aliquam doloribus minus
-                    autem quos.
+                    Capgemini opens a new Cloud Digital Experience Center in
+                    Bengaluru...
                   </p>
                 </blockquote>
 
                 <p>
-                  Sed quo laboriosam qui architecto. Occaecati repellendus omnis
-                  dicta inventore tempore provident voluptas mollitia aliquid.
-                  Id repellendus quia. Asperiores nihil magni dicta est suscipit
-                  perspiciatis. Voluptate ex rerum assumenda dolores nihil
-                  quaerat. Dolor porro tempora et quibusdam voluptas. Beatae aut
-                  at ad qui tempore corrupti velit quisquam rerum. Omnis dolorum
-                  exercitationem harum qui qui blanditiis neque. Iusto autem
-                  itaque. Repudiandae hic quae aspernatur ea neque qui.
-                  Architecto voluptatem magni. Vel magnam quod et tempora
-                  deleniti error rerum nihil tempora.
-                </p>
-
-                <h3>Et quae iure vel ut odit alias.</h3>
-                <p>
-                  Officiis animi maxime nulla quo et harum eum quis a. Sit hic
-                  in qui quos fugit ut rerum atque. Optio provident dolores
-                  atque voluptatem rem excepturi molestiae qui. Voluptatem
-                  laborum omnis ullam quibusdam perspiciatis nulla nostrum.
-                  Voluptatum est libero eum nesciunt aliquid qui. Quia et
-                  suscipit non sequi. Maxime sed odit. Beatae nesciunt nesciunt
-                  accusamus quia aut ratione aspernatur dolor. Sint harum
-                  eveniet dicta exercitationem minima. Exercitationem omnis
-                  asperiores natus aperiam dolor consequatur id ex sed.
-                  Quibusdam rerum dolores sint consequatur quidem ea. Beatae
-                  minima sunt libero soluta sapiente in rem assumenda. Et qui
-                  odit voluptatem. Cum quibusdam voluptatem voluptatem accusamus
-                  mollitia aut atque aut.
+                  Most organizations recognize the inherent benefits in moving
+                  applications and business processes to a cloud-first, digital
+                  operating model.
+                  <p>
+                    {" "}
+                    But it wasn’t until the pandemic swept across the world and
+                    digital solutions became essential, that organizations began
+                    to comprehend the real need for agility, resilience, and
+                    efficiency.
+                  </p>
+                  <p>
+                    Organizations realised they couldn’t stall; they had to
+                    start their cloud transformation journey, ensuring maximum
+                    business value with minimal costs, risk, and disruption.
+                  </p>
                 </p>
                 <img
                   src="assets/img/blog/blog-inside-post.jpg"
                   class="img-fluid"
                   alt=""
                 />
-
-                <h3>Ut repellat blanditiis est dolore sunt dolorum quae.</h3>
-                <p>
-                  Rerum ea est assumenda pariatur quasi et quam. Facilis nam
-                  porro amet nostrum. In assumenda quia quae a id praesentium.
-                  Quos deleniti libero sed occaecati aut porro autem.
-                  Consectetur sed excepturi sint non placeat quia repellat
-                  incidunt labore. Autem facilis hic dolorum dolores vel.
-                  Consectetur quasi id et optio praesentium aut asperiores eaque
-                  aut. Explicabo omnis quibusdam esse. Ex libero illum iusto
-                  totam et ut aut blanditiis. Veritatis numquam ut illum ut a
-                  quam vitae.
-                </p>
-                <p>
-                  Alias quia non aliquid. Eos et ea velit. Voluptatem maxime
-                  enim omnis ipsa voluptas incidunt. Nulla sit eaque mollitia
-                  nisi asperiores est veniam.
-                </p>
               </div>
 
               <div class="entry-footer">
@@ -147,7 +114,7 @@ const Contact = () => {
                 alt=""
               />
               <div>
-                <h4>Jane Smith</h4>
+                <h4>Thierry Daumas</h4>
                 <div class="social-links">
                   <a href="https://twitters.com/#">
                     <i class="bi bi-twitter"></i>
@@ -160,10 +127,8 @@ const Contact = () => {
                   </a>
                 </div>
                 <p>
-                  Itaque quidem optio quia voluptatibus dolorem dolor. Modi eum
-                  sed possimus accusantium. Quas repellat voluptatem officia
-                  numquam sint aspernatur voluptas. Esse et accusantium ut unde
-                  voluptas.
+                  Head of Project and Consulting, CIS and Global Offer Lead
+                  Cybersecurity..
                 </p>
               </div>
             </div>
@@ -178,17 +143,18 @@ const Contact = () => {
                   </div>
                   <div>
                     <h5>
-                      <a href="">Georgia Reader</a>{" "}
+                      <a href="">Priya Shing</a>{" "}
                       <a href="#" class="reply">
                         <i class="bi bi-reply-fill"></i> Reply
                       </a>
                     </h5>
-                    <time datetime="2020-01-01">25 Deec, 2021</time>
+                    <time datetime="2020-12-25">25 Dec, 2020</time>
                     <p>
-                      Et rerum totam nisi. Molestiae vel quam dolorum vel
-                      voluptatem et et. Est ad aut sapiente quis molestiae est
-                      qui cum soluta. Vero aut rerum vel. Rerum quos laboriosam
-                      placeat ex qui. Sint qui facilis et.
+                      Capgemini is a very reputed company.Getting a job in
+                      capgemini is like a dream come true. But the selection
+                      process is not easy one.After reading this article i got
+                      so many ideas and motivation to app and how to prepare
+                      well enough
                     </p>
                   </div>
                 </div>
@@ -209,18 +175,18 @@ const Contact = () => {
                     </div>
                     <div>
                       <h5>
-                        <a href="">Sianna Ramsay</a>{" "}
+                        <a href="">Rahul Routh</a>{" "}
                         <a href="#" class="reply">
                           <i class="bi bi-reply-fill"></i> Reply
                         </a>
                       </h5>
-                      <time datetime="2020-01-01">01 Jan, 2020</time>
+                      <time datetime="2021-01-01">01 Jan, 2021</time>
                       <p>
-                        Et dignissimos impedit nulla et quo distinctio ex nemo.
-                        Omnis quia dolores cupiditate et. Ut unde qui eligendi
-                        sapiente omnis ullam. Placeat porro est commodi est
-                        officiis voluptas repellat quisquam possimus.
-                        Perferendis id consectetur necessitatibus.
+                        I heard that , Capgemini Government Solutions (CGS)
+                        welcomes a fresh class of interns to grow their skills
+                        through a broad range of experiences while learning
+                        about consulting and information technology in the
+                        federal government market.
                       </p>
                     </div>
                   </div>
@@ -337,7 +303,7 @@ const Contact = () => {
                   />
                   <h4>
                     <a href="blog-single.html">
-                      Nihil blanditiis at in nihil autem
+                      Nothing falttering but an falttering light.
                     </a>
                   </h4>
                   <time datetime="2020-01-01">Jan 1, 2020</time>
@@ -349,7 +315,7 @@ const Contact = () => {
                     alt=""
                   />
                   <h4>
-                    <a href="blog-single.html">Quidem autem et impedit</a>
+                    <a href="blog-single.html">some impartail design</a>
                   </h4>
                   <time datetime="2020-01-01">Jan 1, 2020</time>
                 </div>
@@ -361,7 +327,7 @@ const Contact = () => {
                   />
                   <h4>
                     <a href="blog-single.html">
-                      Id quia et et ut maxime similique occaecati ut
+                      That because both and to the most similar binded at ..
                     </a>
                   </h4>
                   <time datetime="2020-01-01">Jan 1, 2020</time>
@@ -374,7 +340,7 @@ const Contact = () => {
                   />
                   <h4>
                     <a href="blog-single.html">
-                      Laborum corporis quo dara net para
+                      Emerging tech boosting wed ,easy pay some way.
                     </a>
                   </h4>
                   <time datetime="2020-01-01">Jan 1, 2020</time>
@@ -387,7 +353,7 @@ const Contact = () => {
                   />
                   <h4>
                     <a href="blog-single.html">
-                      Et dolores corrupti quae illo quod dolor
+                      Some pain that corrupted by stress loaded
                     </a>
                   </h4>
                   <time datetime="2020-01-01">Jan 1, 2020</time>

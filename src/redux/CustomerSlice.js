@@ -6,12 +6,6 @@ const CustomerSlice = createSlice({
   name: "customer",
 
   initialState: {
-    // empState: {
-    //     eid: 101,
-    //     firstName: 'Sonu',
-    //     salary: 10.5
-    // }
-
     customerState: new Customer(),
     customerList: [],
   },
@@ -21,17 +15,13 @@ const CustomerSlice = createSlice({
       console.log("CustomerSlice reducers getCustomerById");
       state.customerState = action.payload;
     },
-
-    // getAllConnection: (state, action) => {
-    //   console.log("ConnectionSlice reducers getAllConnection");
-    //   state.connectionList = action.payload;
-    // },
-
-    // more methods will be added
+    getAllCustomer: (state, action) => {
+      console.log("ConnectionSlice reducers getAllCustomer");
+      state.customerList = action.payload;
+    },
   },
 });
 
-// export const { getEmpById, getAllEmps } = EmpSlice.actions;
-export const { getCustomerById } = CustomerSlice.actions;
+export const { getCustomerById, getAllCustomer } = CustomerSlice.actions;
 
 export default CustomerSlice.reducer;

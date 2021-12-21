@@ -3,6 +3,8 @@ import depReducer from "./DepSlice";
 import connectionReducer from "./ConnectionSlice";
 import customerReducer from "./CustomerSlice";
 import paymentReducer from "./PaymentSlice";
+import ReadingReducer from "./ReadingSlice";
+import BillReducer from "./BillSlice";
 // steps -
 // 1. create store - only one
 // 2. provide the store to index.js
@@ -23,7 +25,8 @@ const store = configureStore({
     connection: connectionReducer,
     customer: customerReducer,
     payment: paymentReducer,
-
+    reading: ReadingReducer,
+    bill: BillReducer,
     // ,
     // anotherComponent: anotherComponentReducer
   },
