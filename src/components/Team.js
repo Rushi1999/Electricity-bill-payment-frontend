@@ -37,11 +37,12 @@ const Team = () => {
               </div>
               <div class="member-info">
                 <h4>Rushikesh Jankar</h4>
-                {/* <span>Chief Executive Officer</span> */}
                 <p>
-                  Velit aut quia fugit et et. Dolorum ea voluptate vel tempore
-                  tenetur ipsa quae aut. Ipsum exercitationem iure minima enim
-                  corporis et voluptate.
+                  Meet our Software engineer/Analyst "Rushikesh Jankar" a member
+                  of an amazing team and dedicated to provide over best for
+                  Company and support system for this team. lets see what he say
+                  about him self!! "A day start with code end with code is
+                  something ,that is my zone!"
                 </p>
               </div>
             </div>
